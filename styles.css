@@ -1,0 +1,120 @@
+/* ==========================================================================
+   TASA-LSF — page d'attente (site en construction)
+   Couleurs reprises des lettres du logo.
+   ========================================================================== */
+
+:root {
+  --fond: #F5F2EA;      /* fond de page (blanc cassé chaud) */
+  --carte: #FFFFFF;     /* fond de la carte */
+  --encre: #1B2330;     /* texte principal */
+  --gris: #5A6472;      /* texte secondaire */
+  --bord: #E6E1D6;      /* bordures */
+  --primary: #1667D6;   /* liens */
+
+  /* les 7 couleurs du logo (T A S A - L S F) */
+  --c1: #A32B2B; --c2: #5B3E9B; --c3: #E0B22B; --c4: #1F3D73;
+  --c5: #17A6A0; --c6: #2E86D6; --c7: #E8802B;
+}
+
+/* Mode sombre : on ne redéfinit que ce qui change */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fond: #0E1626; --carte: #151F30; --encre: #EAF1FB;
+    --gris: #A7B4C6; --bord: #243247;
+    --primary: #5FA0FF;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--encre);
+  font-family: "Atkinson Hyperlegible", Verdana, system-ui, sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+}
+
+/* La carte centrale */
+.carte {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 640px;
+  background: var(--carte);
+  border: 1px solid var(--bord);
+  border-radius: 18px;
+  padding: 40px 32px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+}
+
+/* Le bandeau multicolore en haut, rappel du logo */
+.carte::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 8px;
+  background: linear-gradient(90deg,
+    var(--c1), var(--c2), var(--c3), var(--c4), var(--c5), var(--c6), var(--c7));
+}
+
+.logo {
+  display: block;
+  width: min(380px, 86%);
+  height: auto;
+  margin: 16px auto 22px;
+  /* plaque blanche : le sous-titre du logo reste lisible en clair comme en sombre */
+  background: #FFFFFF;
+  padding: 14px 20px;
+  border-radius: 12px;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 6px 14px;
+  background: var(--c3);
+  color: #3A2C00;
+  font-weight: 800;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  border-radius: 999px;
+}
+
+h1 {
+  margin: 0 0 14px;
+  font-size: 1.8rem;
+}
+
+.intro {
+  max-width: 52ch;
+  margin: 0 auto 22px;
+  color: var(--gris);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.contact { margin: 0; font-size: 1.05rem; }
+.contact a { color: var(--primary); font-weight: 700; }
+
+.pied {
+  margin-top: 22px;
+  color: var(--gris);
+  font-size: .9rem;
+}
+
+/* Téléphones */
+@media (max-width: 480px) {
+  h1 { font-size: 1.5rem; }
+  .carte { padding: 30px 20px; }
+}
