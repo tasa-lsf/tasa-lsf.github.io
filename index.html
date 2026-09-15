@@ -18,17 +18,88 @@
       <p class="badge">Site en construction</p>
       <h1>Le site arrive bientôt</h1>
 
-      <p class="intro">
-        TASA-LSF est une ressource terminologique médico-sociale, pensée pour être accessible
-        aux personnes Sourdes et allophones : définitions en texte simplifié, images en
-        Facile à Lire et à Comprendre (FALC) et vidéos en langue des signes française.
-      </p>
+      <div class="intro">
+        <p>TASA-LSF est une ressource terminologique médico-sociale qui permet aux personnes Sourdes et allophones de comprendre les mots du médical et du social, grâce à des vidéos en langue des signes française, des images en Facile à Lire et à Comprendre (FALC) et des définitions en texte simplifié.</p>
+        <p>Elle est aussi un moyen, pour le personnel soignant et social, de se documenter, sans jamais remplacer les interprètes ou les interfaces.</p>
+        <p>Et pourquoi pas être utile aux linguistes et aux chercheurs.</p>
+      </div>
 
       <p class="contact">Une question ? <a href="mailto:contact@tasa-lsf.fr">contact@tasa-lsf.fr</a></p>
     </section>
-
     <footer class="pied">&copy; 2026 TASA-LSF</footer>
   </main>
 
+  <!-- Bouton rond pour ouvrir les réglages d'accessibilité -->
+  <button type="button" class="acc-fab" id="accFab" aria-label="Ouvrir les réglages d'accessibilité" aria-expanded="false" onclick="basculerPanneau()">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <circle cx="12" cy="4.3" r="1.9" fill="currentColor" stroke="none"></circle>
+      <line x1="4.5" y1="8.5" x2="19.5" y2="8.5"></line>
+      <line x1="12" y1="8.5" x2="12" y2="14.5"></line>
+      <line x1="12" y1="14.5" x2="8.5" y2="21"></line>
+      <line x1="12" y1="14.5" x2="15.5" y2="21"></line>
+    </svg>
+  </button>
+
+  <!-- Panneau d'accessibilité -->
+  <section class="acc-panneau" id="accPanneau" role="dialog" aria-label="Réglages d'accessibilité">
+    <div class="acc-tete">
+      <h2>Accessibilité</h2>
+      <button type="button" class="acc-fermer" aria-label="Fermer le panneau" onclick="basculerPanneau()">&times;</button>
+    </div>
+    <div class="acc-corps">
+
+      <div class="acc-ligne"><span class="lab">Contraste</span>
+        <div class="acc-choix">
+          <button type="button" class="acc-b ico actif" id="mClair" onclick="setMode('clair')">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.4"/><line x1="12" y1="3.5" x2="12" y2="5.6"/><line x1="12" y1="18.4" x2="12" y2="20.5"/><line x1="3.5" y1="12" x2="5.6" y2="12"/><line x1="18.4" y1="12" x2="20.5" y2="12"/><line x1="6" y1="6" x2="7.5" y2="7.5"/><line x1="16.5" y1="16.5" x2="18" y2="18"/><line x1="6" y1="18" x2="7.5" y2="16.5"/><line x1="16.5" y1="7.5" x2="18" y2="6"/></svg>
+            <span>Clair</span>
+          </button>
+          <button type="button" class="acc-b ico" id="mSombre" onclick="setMode('dark')">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M14.2 3.6a8.5 8.5 0 1 0 6.2 12.9A6.8 6.8 0 0 1 14.2 3.6z"/></svg>
+            <span>Sombre</span>
+          </button>
+          <button type="button" class="acc-b ico" id="mNb" onclick="setMode('nb')">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor" stroke="none"/></svg>
+            <span>Noir et blanc</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="acc-ligne"><span class="lab">Taille du texte</span>
+        <div class="acc-choix">
+          <button type="button" class="acc-b" id="tPetit" onclick="setTaille('petit')" aria-label="Réduire le texte">A−</button>
+          <button type="button" class="acc-b actif" id="tNormal" onclick="setTaille('normal')" aria-label="Taille normale">A</button>
+          <button type="button" class="acc-b" id="tGrand" onclick="setTaille('grand')" aria-label="Agrandir le texte">A+</button>
+        </div>
+      </div>
+
+      <div class="acc-ligne"><span class="lab">Police</span>
+        <div class="acc-choix">
+          <button type="button" class="acc-b actif" id="pStd" onclick="setPolice('standard')">Standard</button>
+          <button type="button" class="acc-b" id="pDys" onclick="setPolice('dys')">Dys (dyslexie)</button>
+        </div>
+      </div>
+
+      <div class="acc-ligne"><span class="lab">Interligne</span>
+        <div class="acc-pm">
+          <button type="button" class="acc-b" onclick="pas('interligne',-1)" aria-label="Diminuer l'interligne">−</button>
+          <span class="val" id="vInter">1.6</span>
+          <button type="button" class="acc-b" onclick="pas('interligne',1)" aria-label="Augmenter l'interligne">+</button>
+        </div>
+      </div>
+
+      <div class="acc-ligne"><span class="lab">Espacement des lettres</span>
+        <div class="acc-pm">
+          <button type="button" class="acc-b" onclick="pas('lettres',-1)" aria-label="Diminuer l'espacement">−</button>
+          <span class="val" id="vLettres">0</span>
+          <button type="button" class="acc-b" onclick="pas('lettres',1)" aria-label="Augmenter l'espacement">+</button>
+        </div>
+      </div>
+
+      <button type="button" class="acc-reset" onclick="reinitialiser()">Réinitialiser</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>

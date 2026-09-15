@@ -1,120 +1,86 @@
 /* ==========================================================================
-   TASA-LSF — page d'attente (site en construction)
-   Couleurs reprises des lettres du logo.
+   TASA-LSF — page d'attente + panneau d'accessibilité
+   Design de la ressource : plat, coins carrés, couleurs du logo.
    ========================================================================== */
 
-:root {
-  --fond: #F5F2EA;      /* fond de page (blanc cassé chaud) */
-  --carte: #FFFFFF;     /* fond de la carte */
-  --encre: #1B2330;     /* texte principal */
-  --gris: #5A6472;      /* texte secondaire */
-  --bord: #E6E1D6;      /* bordures */
-  --primary: #1667D6;   /* liens */
+@font-face { font-family:"Atkinson Hyperlegible"; src:url("images/fonts/Atkinson-Regular.otf") format("opentype"); font-weight:400; font-style:normal; font-display:swap; }
+@font-face { font-family:"Atkinson Hyperlegible"; src:url("images/fonts/Atkinson-Bold.otf") format("opentype"); font-weight:700; font-style:normal; font-display:swap; }
+@font-face { font-family:"OpenDyslexic"; src:url("images/fonts/OpenDyslexic-Regular.otf") format("opentype"); font-weight:400; font-style:normal; font-display:swap; }
+@font-face { font-family:"OpenDyslexic"; src:url("images/fonts/OpenDyslexic-Bold.otf") format("opentype"); font-weight:700; font-style:normal; font-display:swap; }
 
-  /* les 7 couleurs du logo (T A S A - L S F) */
-  --c1: #A32B2B; --c2: #5B3E9B; --c3: #E0B22B; --c4: #1F3D73;
-  --c5: #17A6A0; --c6: #2E86D6; --c7: #E8802B;
+/* ---- Couleurs : Clair (défaut), Sombre, Noir et blanc ---- */
+:root{
+  --fond:#F5F2EA; --carte:#FFFFFF; --encre:#1B2330; --gris:#556; --bord:#CBD8EA;
+  --primary:#1667D6; --jaune:#F7DA61;
+  --entete:#123A6B; --entete-txt:#FFFFFF;   /* bandeau du panneau (design mémoire) */
+  --fab:#2E86D6;                            /* rond accessibilité : bleu du logo TASA */
+  --interligne:1.6; --lettres:0em;
 }
+:root[data-mode="dark"]{ --fond:#0E1626; --carte:#151F30; --encre:#EAF1FB; --gris:#A7B4C6; --bord:#2A3B5A; --primary:#5FA0FF; --entete:#04264F; }
+:root[data-mode="nb"]{ --fond:#FFFFFF; --carte:#FFFFFF; --encre:#000; --gris:#000; --bord:#000; --primary:#000; --jaune:#FFFFFF; --entete:#000; --fab:#000; }
 
-/* Mode sombre : on ne redéfinit que ce qui change */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --fond: #0E1626; --carte: #151F30; --encre: #EAF1FB;
-    --gris: #A7B4C6; --bord: #243247;
-    --primary: #5FA0FF;
-  }
-}
+/* ---- Taille du texte ---- */
+html{ font-size:112.5%; }
+:root[data-taille="petit"]{ font-size:100%; }
+:root[data-taille="grand"]{ font-size:131%; }
+/* ---- Police adaptée à la dyslexie ---- */
+:root[data-police="dys"] body{ font-family:"OpenDyslexic","Atkinson Hyperlegible",Verdana,sans-serif; }
 
-* { box-sizing: border-box; }
+*{ box-sizing:border-box; }
+body{ margin:0; background:var(--fond); color:var(--encre); font-family:"Atkinson Hyperlegible",Verdana,system-ui,sans-serif; letter-spacing:var(--lettres); }
 
-body {
-  margin: 0;
-  background: var(--fond);
-  color: var(--encre);
-  font-family: "Atkinson Hyperlegible", Verdana, system-ui, sans-serif;
-}
+/* ---- Page d'attente ---- */
+.page{ min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:28px; }
+.carte{ width:100%; max-width:660px; background:var(--carte); border:1px solid var(--bord); padding:38px 34px; text-align:center; }
+:root[data-mode="nb"] .carte{ border:2px solid #000; }
+.logo{ display:block; width:min(400px,88%); height:auto; margin:6px auto 22px; background:#FFF; padding:14px 20px; border:1px solid var(--bord); }
+.badge{ display:inline-block; margin:0 0 16px; padding:6px 14px; background:var(--jaune); color:#3A2C00; font-weight:800; font-size:.8rem; text-transform:uppercase; letter-spacing:.04em; }
+:root[data-mode="nb"] .badge{ background:#fff; color:#000; border:2px solid #000; }
+h1{ margin:0 0 16px; font-size:1.8rem; line-height:var(--interligne); }
+.intro{ max-width:56ch; margin:0 auto; color:var(--gris); font-size:1.08rem; line-height:var(--interligne); text-align:left; }
+.intro p{ margin:0 0 12px; }
+.intro p:last-child{ margin-bottom:0; }
+.contact{ margin:20px 0 0; font-size:1.05rem; text-align:center; }
+.contact a{ color:var(--primary); font-weight:700; }
+:root[data-mode="nb"] .contact a{ text-decoration:underline; }
+.pied{ margin-top:20px; color:var(--gris); font-size:.9rem; }
 
-.page {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 28px;
-}
+/* ---- Rond accessibilité (couleur TASA) ---- */
+.acc-fab{ position:fixed; right:20px; bottom:20px; width:58px; height:58px; border-radius:50%; border:none; background:var(--fab); color:#fff; cursor:pointer; box-shadow:0 6px 18px rgba(0,0,0,.28); display:flex; align-items:center; justify-content:center; z-index:50; }
+.acc-fab svg{ width:32px; height:32px; }
+.acc-fab:focus-visible{ outline:3px solid var(--jaune); outline-offset:3px; }
+:root[data-mode="nb"] .acc-fab{ border:2px solid #fff; }
 
-/* La carte centrale */
-.carte {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  max-width: 640px;
-  background: var(--carte);
-  border: 1px solid var(--bord);
-  border-radius: 18px;
-  padding: 40px 32px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
-}
+/* ---- Panneau d'accessibilité (carré, bandeau bleu) ---- */
+.acc-panneau{ display:none; position:fixed; right:20px; bottom:88px; width:322px; max-width:calc(100vw - 40px); background:var(--carte); color:var(--encre); border:1px solid var(--bord); box-shadow:0 12px 34px rgba(0,0,0,.30); z-index:51; }
+.acc-panneau.ouvert{ display:block; }
+:root[data-mode="nb"] .acc-panneau{ border:2px solid #000; }
+.acc-tete{ display:flex; align-items:center; justify-content:space-between; padding:11px 16px; background:var(--entete); color:var(--entete-txt); }
+.acc-tete h2{ margin:0; font-size:1.05rem; text-transform:uppercase; letter-spacing:.03em; }
+.acc-fermer{ background:none; border:none; font-size:1.5rem; line-height:1; cursor:pointer; color:var(--entete-txt); }
+.acc-corps{ padding:4px 16px 16px; }
+.acc-ligne{ padding:11px 0; border-top:1px solid var(--bord); }
+.acc-ligne:first-child{ border-top:none; }
+.acc-ligne > .lab{ display:block; font-weight:800; font-size:.82rem; text-transform:uppercase; letter-spacing:.03em; color:var(--gris); margin:0 0 7px; }
+.acc-choix{ display:flex; gap:8px; flex-wrap:wrap; }
+.acc-b{ flex:1; min-width:56px; background:#fff; color:#111; border:1px solid var(--bord); padding:8px 6px; font:inherit; font-weight:700; font-size:.95rem; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px; }
+.acc-b svg{ width:18px; height:18px; flex:none; }
+.acc-b.ico{ flex-direction:column; gap:5px; padding:9px 4px; font-size:.82rem; line-height:1.15; }
+.acc-b.ico svg{ width:22px; height:22px; }
+.acc-b.actif{ background:var(--jaune); color:#000; border-color:#000; }
+.acc-b:hover{ background:var(--jaune); color:#000; }
+.acc-b:focus-visible{ outline:3px solid var(--primary); outline-offset:2px; }
+:root[data-mode="dark"] .acc-b{ background:#0E1626; color:#EAF1FB; }
+:root[data-mode="nb"] .acc-b{ background:#fff; color:#000; border:2px solid #000; }
+:root[data-mode="nb"] .acc-b.actif{ background:#000; color:#fff; }
+.acc-pm{ display:flex; align-items:center; gap:8px; }
+.acc-pm .val{ flex:1; text-align:center; font-weight:800; }
+.acc-reset{ width:100%; margin-top:12px; background:none; border:1px solid var(--bord); padding:9px; font:inherit; font-weight:700; color:var(--primary); cursor:pointer; }
 
-/* Le bandeau multicolore en haut, rappel du logo */
-.carte::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 8px;
-  background: linear-gradient(90deg,
-    var(--c1), var(--c2), var(--c3), var(--c4), var(--c5), var(--c6), var(--c7));
-}
-
-.logo {
-  display: block;
-  width: min(380px, 86%);
-  height: auto;
-  margin: 16px auto 22px;
-  /* plaque blanche : le sous-titre du logo reste lisible en clair comme en sombre */
-  background: #FFFFFF;
-  padding: 14px 20px;
-  border-radius: 12px;
-}
-
-.badge {
-  display: inline-block;
-  margin: 0 0 14px;
-  padding: 6px 14px;
-  background: var(--c3);
-  color: #3A2C00;
-  font-weight: 800;
-  font-size: .8rem;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  border-radius: 999px;
-}
-
-h1 {
-  margin: 0 0 14px;
-  font-size: 1.8rem;
-}
-
-.intro {
-  max-width: 52ch;
-  margin: 0 auto 22px;
-  color: var(--gris);
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-.contact { margin: 0; font-size: 1.05rem; }
-.contact a { color: var(--primary); font-weight: 700; }
-
-.pied {
-  margin-top: 22px;
-  color: var(--gris);
-  font-size: .9rem;
-}
-
-/* Téléphones */
-@media (max-width: 480px) {
-  h1 { font-size: 1.5rem; }
-  .carte { padding: 30px 20px; }
+/* ---- Téléphones ---- */
+@media (max-width:480px){
+  h1{ font-size:1.5rem; }
+  .carte{ padding:28px 18px; }
+  .acc-panneau{ right:12px; left:12px; width:auto; bottom:84px; }
+  .acc-fab{ right:14px; bottom:14px; }
 }
