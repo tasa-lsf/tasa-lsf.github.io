@@ -15,31 +15,30 @@ function garder(cle, valeur) {
   try { localStorage.setItem(cle, valeur); } catch (e) {}
 }
 
-// Met le bouton choisi en "actif" et retire l'état des autres
+// Met le bouton choisi en "actif" (et aria-pressed) et retire l'état des autres
 function actif(ids, idActif) {
   for (var i = 0; i < ids.length; i++) {
     var b = document.getElementById(ids[i]);
-    if (b) { b.classList.remove('actif'); }
+    if (b) { b.classList.toggle('actif', ids[i] === idActif); b.setAttribute('aria-pressed', ids[i] === idActif ? 'true' : 'false'); }
   }
-  var a = document.getElementById(idActif);
-  if (a) { a.classList.add('actif'); }
 }
 
-function setMode(v) {
-  R.setAttribute('data-mode', v);
-  garder('tasa-mode', v);
+// Le logo suit le mode via le CSS (classes .logo-clair / .logo-sombre / .logo-nb)
+function setMode(v, sansGarder) {
+  if (v === 'dark' || v === 'nb') { R.setAttribute('data-mode', v); } else { R.removeAttribute('data-mode'); v = 'clair'; }
+  if (!sansGarder) { garder('tasa-mode', v); }
   actif(['mClair', 'mSombre', 'mNb'], v === 'dark' ? 'mSombre' : v === 'nb' ? 'mNb' : 'mClair');
 }
 
-function setTaille(v) {
+function setTaille(v, sansGarder) {
   R.setAttribute('data-taille', v);
-  garder('tasa-taille', v);
+  if (!sansGarder) { garder('tasa-taille', v); }
   actif(['tPetit', 'tNormal', 'tGrand'], v === 'petit' ? 'tPetit' : v === 'grand' ? 'tGrand' : 'tNormal');
 }
 
-function setPolice(v) {
+function setPolice(v, sansGarder) {
   R.setAttribute('data-police', v);
-  garder('tasa-police', v);
+  if (!sansGarder) { garder('tasa-police', v); }
   actif(['pStd', 'pDys'], v === 'dys' ? 'pDys' : 'pStd');
 }
 
@@ -66,7 +65,7 @@ function reinitialiser() {
   S.setProperty('--interligne', 1.6);
   S.setProperty('--lettres', '0em');
   document.getElementById('vInter').textContent = '1.6';
-  document.getElementById('vLettres').textContent = '0';
+  document.getElementById('vLettres').textContent = '0.00';
   try {
     localStorage.removeItem('tasa-mode');
     localStorage.removeItem('tasa-taille');
@@ -74,7 +73,12 @@ function reinitialiser() {
     localStorage.removeItem('tasa-inter');
     localStorage.removeItem('tasa-lettres');
   } catch (e) {}
-  setMode('clair'); setTaille('normal'); setPolice('standard');
+  // Retour aux réglages par défaut (mode normal), sans rien mémoriser
+  setMode('clair', true); setTaille('normal', true); setPolice('standard', true);
+}
+
+function systemeSombre() {
+  return !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
 }
 
 // Ouvre / ferme le panneau
@@ -89,16 +93,18 @@ function basculerPanneau() {
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') {
     var p = document.getElementById('accPanneau');
-    if (p.classList.contains('ouvert')) { basculerPanneau(); }
+    if (p.classList.contains('ouvert')) { basculerPanneau(); document.getElementById('accFab').focus(); }
   }
 });
 
-// Au chargement : on restaure les préférences mémorisées
+// Au chargement : les attributs ont déjà été posés par le script du <head> ;
+// on synchronise les boutons et on restaure interligne / espacement.
 (function restaurer() {
+  var m = R.getAttribute('data-mode');
+  setMode(m || 'clair', true);
+  setTaille(R.getAttribute('data-taille') || 'normal', true);
+  setPolice(R.getAttribute('data-police') || 'standard', true);
   try {
-    var m = localStorage.getItem('tasa-mode');   if (m) { setMode(m); }
-    var t = localStorage.getItem('tasa-taille');  if (t) { setTaille(t); }
-    var p = localStorage.getItem('tasa-police');  if (p) { setPolice(p); }
     var li = localStorage.getItem('tasa-inter');
     if (li) { inter = parseFloat(li); S.setProperty('--interligne', inter); document.getElementById('vInter').textContent = inter.toFixed(1); }
     var le = localStorage.getItem('tasa-lettres');

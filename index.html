@@ -6,13 +6,27 @@
   <title>TASA-LSF</title>
   <meta name="description" content="TASA-LSF, ressource terminologique médico-sociale accessible aux Sourds et allophones. Le site arrive bientôt.">
   <link rel="stylesheet" href="styles.css">
+  <!-- Applique les réglages mémorisés avant l'affichage (évite le « flash » du mode clair) -->
+  <script>
+    (function () {
+      var R = document.documentElement, g = function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } };
+      var m = g('tasa-mode');
+      if (m && m !== 'clair') R.setAttribute('data-mode', m);
+      var t = g('tasa-taille'); if (t) R.setAttribute('data-taille', t);
+      var p = g('tasa-police'); if (p) R.setAttribute('data-police', p);
+    })();
+  </script>
 </head>
 <body>
 
   <main class="page">
     <section class="carte">
-      <!-- Le logo contient déjà le sous-titre du projet -->
-      <img class="logo" src="images/logo_tasa.png"
+      <!-- Un logo par mode, affiché par le CSS selon data-mode (fonctionne même sans JavaScript) -->
+      <img class="logo logo-clair" src="images/logo_tasa.svg"
+           alt="TASA-LSF, ressource terminologique médico-sociale accessible aux Sourds et Allophones">
+      <img class="logo logo-sombre" src="images/logo_tasa_sombre.svg"
+           alt="TASA-LSF, ressource terminologique médico-sociale accessible aux Sourds et Allophones">
+      <img class="logo logo-nb" src="images/logo_tasa_noir_blanc.svg"
            alt="TASA-LSF, ressource terminologique médico-sociale accessible aux Sourds et Allophones">
 
       <p class="badge">Site en construction</p>
@@ -30,7 +44,7 @@
   </main>
 
   <!-- Bouton rond pour ouvrir les réglages d'accessibilité -->
-  <button type="button" class="acc-fab" id="accFab" aria-label="Ouvrir les réglages d'accessibilité" aria-expanded="false" onclick="basculerPanneau()">
+  <button type="button" class="acc-fab" id="accFab" aria-label="Ouvrir les réglages d'accessibilité" aria-expanded="false" aria-controls="accPanneau" onclick="basculerPanneau()">
     <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
       <circle cx="12" cy="4.3" r="1.9" fill="currentColor" stroke="none"></circle>
       <line x1="4.5" y1="8.5" x2="19.5" y2="8.5"></line>
@@ -41,7 +55,7 @@
   </button>
 
   <!-- Panneau d'accessibilité -->
-  <section class="acc-panneau" id="accPanneau" role="dialog" aria-label="Réglages d'accessibilité">
+  <section class="acc-panneau" id="accPanneau" aria-label="Réglages d'accessibilité">
     <div class="acc-tete">
       <h2>Accessibilité</h2>
       <button type="button" class="acc-fermer" aria-label="Fermer le panneau" onclick="basculerPanneau()">&times;</button>
@@ -91,7 +105,7 @@
       <div class="acc-ligne"><span class="lab">Espacement des lettres</span>
         <div class="acc-pm">
           <button type="button" class="acc-b" onclick="pas('lettres',-1)" aria-label="Diminuer l'espacement">−</button>
-          <span class="val" id="vLettres">0</span>
+          <span class="val" id="vLettres">0.00</span>
           <button type="button" class="acc-b" onclick="pas('lettres',1)" aria-label="Augmenter l'espacement">+</button>
         </div>
       </div>

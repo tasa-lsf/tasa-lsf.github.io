@@ -13,11 +13,12 @@
   --fond:#F5F2EA; --carte:#FFFFFF; --encre:#1B2330; --gris:#556; --bord:#CBD8EA;
   --primary:#1667D6; --jaune:#F7DA61;
   --entete:#123A6B; --entete-txt:#FFFFFF;   /* bandeau du panneau (design mémoire) */
-  --fab:#2E86D6;                            /* rond accessibilité : bleu du logo TASA */
+  --fab:#FC95E8; --fab-ic:#5A0A2A;          /* rond accessibilité : rose TASA + picto foncé */
   --interligne:1.6; --lettres:0em;
+  color-scheme:light;
 }
-:root[data-mode="dark"]{ --fond:#0E1626; --carte:#151F30; --encre:#EAF1FB; --gris:#A7B4C6; --bord:#2A3B5A; --primary:#5FA0FF; --entete:#04264F; }
-:root[data-mode="nb"]{ --fond:#FFFFFF; --carte:#FFFFFF; --encre:#000; --gris:#000; --bord:#000; --primary:#000; --jaune:#FFFFFF; --entete:#000; --fab:#000; }
+:root[data-mode="dark"]{ color-scheme:dark; --fond:#0E1626; --carte:#151F30; --encre:#EAF1FB; --gris:#A7B4C6; --bord:#2A3B5A; --primary:#5FA0FF; --entete:#04264F; }
+:root[data-mode="nb"]{ --fond:#FFFFFF; --carte:#FFFFFF; --encre:#000; --gris:#000; --bord:#000; --primary:#000; --jaune:#FFFFFF; --entete:#000; --fab:#000; --fab-ic:#fff; }
 
 /* ---- Taille du texte ---- */
 html{ font-size:112.5%; }
@@ -33,7 +34,11 @@ body{ margin:0; background:var(--fond); color:var(--encre); font-family:"Atkinso
 .page{ min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:28px; }
 .carte{ width:100%; max-width:660px; background:var(--carte); border:1px solid var(--bord); padding:38px 34px; text-align:center; }
 :root[data-mode="nb"] .carte{ border:2px solid #000; }
-.logo{ display:block; width:min(400px,88%); height:auto; margin:6px auto 22px; background:#FFF; padding:14px 20px; border:1px solid var(--bord); }
+/* Un logo par mode : seul celui du mode actif est affiché */
+.logo{ display:block; width:min(400px,88%); height:auto; margin:6px auto 22px; }
+.logo-sombre, .logo-nb{ display:none; }
+:root[data-mode="dark"] .logo-clair, :root[data-mode="nb"] .logo-clair{ display:none; }
+:root[data-mode="dark"] .logo-sombre, :root[data-mode="nb"] .logo-nb{ display:block; }
 .badge{ display:inline-block; margin:0 0 16px; padding:6px 14px; background:var(--jaune); color:#3A2C00; font-weight:800; font-size:.8rem; text-transform:uppercase; letter-spacing:.04em; }
 :root[data-mode="nb"] .badge{ background:#fff; color:#000; border:2px solid #000; }
 h1{ margin:0 0 16px; font-size:1.8rem; line-height:var(--interligne); }
@@ -46,10 +51,11 @@ h1{ margin:0 0 16px; font-size:1.8rem; line-height:var(--interligne); }
 .pied{ margin-top:20px; color:var(--gris); font-size:.9rem; }
 
 /* ---- Rond accessibilité (couleur TASA) ---- */
-.acc-fab{ position:fixed; right:20px; bottom:20px; width:58px; height:58px; border-radius:50%; border:none; background:var(--fab); color:#fff; cursor:pointer; box-shadow:0 6px 18px rgba(0,0,0,.28); display:flex; align-items:center; justify-content:center; z-index:50; }
+.acc-fab{ position:fixed; right:20px; bottom:20px; width:58px; height:58px; border-radius:50%; border:none; background:var(--fab); color:var(--fab-ic); cursor:pointer; box-shadow:0 6px 18px rgba(0,0,0,.28); display:flex; align-items:center; justify-content:center; z-index:50; }
 .acc-fab svg{ width:32px; height:32px; }
 .acc-fab:focus-visible{ outline:3px solid var(--jaune); outline-offset:3px; }
 :root[data-mode="nb"] .acc-fab{ border:2px solid #fff; }
+:root[data-mode="nb"] .acc-fab:focus-visible{ outline-color:#000; }
 
 /* ---- Panneau d'accessibilité (carré, bandeau bleu) ---- */
 .acc-panneau{ display:none; position:fixed; right:20px; bottom:88px; width:322px; max-width:calc(100vw - 40px); background:var(--carte); color:var(--encre); border:1px solid var(--bord); box-shadow:0 12px 34px rgba(0,0,0,.30); z-index:51; }
@@ -71,8 +77,11 @@ h1{ margin:0 0 16px; font-size:1.8rem; line-height:var(--interligne); }
 .acc-b:hover{ background:var(--jaune); color:#000; }
 .acc-b:focus-visible{ outline:3px solid var(--primary); outline-offset:2px; }
 :root[data-mode="dark"] .acc-b{ background:#0E1626; color:#EAF1FB; }
+:root[data-mode="dark"] .acc-b.actif, :root[data-mode="dark"] .acc-b:hover{ background:var(--jaune); color:#000; border-color:var(--jaune); }
 :root[data-mode="nb"] .acc-b{ background:#fff; color:#000; border:2px solid #000; }
-:root[data-mode="nb"] .acc-b.actif{ background:#000; color:#fff; }
+:root[data-mode="nb"] .acc-b.actif, :root[data-mode="nb"] .acc-b:hover{ background:#000; color:#fff; }
+:root[data-mode="nb"] .acc-b:focus-visible{ outline-color:#000; }
+:root[data-mode="nb"] .acc-reset{ border:2px solid #000; text-decoration:underline; }
 .acc-pm{ display:flex; align-items:center; gap:8px; }
 .acc-pm .val{ flex:1; text-align:center; font-weight:800; }
 .acc-reset{ width:100%; margin-top:12px; background:none; border:1px solid var(--bord); padding:9px; font:inherit; font-weight:700; color:var(--primary); cursor:pointer; }
