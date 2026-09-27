@@ -71,8 +71,8 @@
 /* ---- Boutons retour / accueil (images d'interface du proto) ---- */
 .titre-ligne{ display:flex; align-items:center; gap:10px; padding:14px 0 16px; }
 .btn-retour, .btn-accueil{ width:48px; height:40px; border:none; padding:0; cursor:pointer; background:transparent center / contain no-repeat; }
-.btn-retour{ background-image:url("images/interface/chevron_1.png"); transform:scaleX(-1); }
-.btn-accueil{ background-image:url("images/interface/chevron_double.png"); transform:scaleX(-1); }
+.btn-retour{ background-image:url("images/interface/chevron_1.png"); }
+.btn-accueil{ background-image:url("images/interface/chevron_double.png"); }
 .btn-retour:focus-visible, .btn-accueil:focus-visible{ outline:3px solid var(--primary); outline-offset:3px; }
 .view-title{ margin:0 0 0 8px; font-size:1.5rem; text-transform:uppercase; letter-spacing:.02em; overflow-wrap:anywhere; }
 
