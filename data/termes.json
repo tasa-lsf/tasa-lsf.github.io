@@ -1,0 +1,1357 @@
+[
+  {
+    "id": 1,
+    "slug": "pneumothorax",
+    "forme": "Pneumothorax",
+    "grammaire": {
+      "abreviation": "n.m.",
+      "libelle": "nom masculin"
+    },
+    "domaine": "Pneumologie",
+    "marque_usage": "",
+    "def_simple": "De l'air ou du gaz s'accumule entre le poumon et sa paroi. Cela peut arriver tout seul, ou après un choc ou une maladie. On peut aussi le provoquer exprès pour soigner.",
+    "def_attestee": "Accumulation d'air ou de gaz dans l'espace pleural qui peut survenir spontanément ou à la suite d'un trauma ou d'un processus pathologique. Il peut également être provoqué délibérément (Pneumothorax artificiel).",
+    "def_source": "MeSH, via HeTOP.",
+    "contresens": null,
+    "exemple": "Drainage du pneumothorax d'évolution rapidement favorable.",
+    "exemple_source": "PARHAF, parhaf-05250.txt",
+    "image": "images/termes/pneumothorax/pneumothorax.png",
+    "falc": [
+      {
+        "src": "images/falc/pneumothorax/malade.png",
+        "texte": "De l'air entre →\nle poumon se dégonfle"
+      },
+      {
+        "src": "images/falc/pneumothorax/sain.png",
+        "texte": "Poumon normal →\nil touche la paroi"
+      }
+    ],
+    "parties_corps": [
+      {
+        "id": 3,
+        "label": "Poumons",
+        "x": 236,
+        "y": 168,
+        "sexe": null
+      }
+    ],
+    "glossaire": [
+      {
+        "mot": "cavité pleurale",
+        "explication": "Espace situé entre le poumon et la paroi du thorax."
+      }
+    ],
+    "categories": [],
+    "parcours": [
+      {
+        "ordre": 1,
+        "icon": null,
+        "label": "Consultation ou urgence",
+        "description": null
+      },
+      {
+        "ordre": 2,
+        "icon": null,
+        "label": "Imagerie (radio, scanner)",
+        "description": null
+      },
+      {
+        "ordre": 3,
+        "icon": null,
+        "label": "Traitement (repos, aspiration ou drainage)",
+        "description": null
+      },
+      {
+        "ordre": 4,
+        "icon": null,
+        "label": "Suivi (prévention des récidives)",
+        "description": null
+      }
+    ],
+    "reseau": [
+      {
+        "slug": "bronchopneumopathie",
+        "forme": "Bronchopneumopathie",
+        "relation": "associatif"
+      },
+      {
+        "slug": "dyspnee",
+        "forme": "Dyspnée",
+        "relation": "associatif"
+      }
+    ],
+    "lsf": {
+      "type": "fichier",
+      "src": "images/video_lsf/pneumothorax.mp4",
+      "gloses": [],
+      "hamnosys": ""
+    }
+  },
+  {
+    "id": 2,
+    "slug": "bronchopneumopathie",
+    "forme": "Bronchopneumopathie",
+    "grammaire": {
+      "abreviation": "n.f.",
+      "libelle": "nom féminin"
+    },
+    "domaine": "Pneumologie",
+    "marque_usage": "",
+    "def_simple": "Les parois des plus petits tuyaux des poumons gonflent et deviennent rouges. Par endroits, le poumon se remplit. Cela s'étend aux petits sacs d'air au bout des tuyaux.",
+    "def_attestee": "Inflammation aiguë des parois des bronches les plus petites, avec condensations pulmonaires variables dues à l'extension de l'inflammation aux alvéoles péribronchioliques et aux conduits alvéolaires.",
+    "def_source": "MeSH (Bronchopneumonie), via HeTOP.",
+    "contresens": null,
+    "exemple": "Motif d'hospitalisation : exacerbation de BPCO post tabagique.",
+    "exemple_source": "PARHAF, parhaf-05503.txt",
+    "image": "images/termes/bronchopneumopathie/bronchopneumopathie.png",
+    "falc": [
+      {
+        "src": "images/falc/bronchopneumopathie/1_sain.png",
+        "texte": "Tuyau normal →\nl'air passe"
+      },
+      {
+        "src": "images/falc/bronchopneumopathie/2_malade.png",
+        "texte": "Tuyau gonflé →\nl'air passe mal"
+      }
+    ],
+    "parties_corps": [
+      {
+        "id": 3,
+        "label": "Poumons",
+        "x": 236,
+        "y": 168,
+        "sexe": null
+      }
+    ],
+    "glossaire": [
+      {
+        "mot": "bronches",
+        "explication": "Conduits qui amènent l'air dans les poumons."
+      }
+    ],
+    "categories": [],
+    "parcours": [
+      {
+        "ordre": 1,
+        "icon": null,
+        "label": "Consultation",
+        "description": null
+      },
+      {
+        "ordre": 2,
+        "icon": null,
+        "label": "Examens (radio, prise de sang)",
+        "description": null
+      },
+      {
+        "ordre": 3,
+        "icon": null,
+        "label": "Traitement (antibiotiques, repos)",
+        "description": null
+      },
+      {
+        "ordre": 4,
+        "icon": null,
+        "label": "Suivi (contrôle de la guérison)",
+        "description": null
+      }
+    ],
+    "reseau": [
+      {
+        "slug": "pneumothorax",
+        "forme": "Pneumothorax",
+        "relation": "associatif"
+      },
+      {
+        "slug": "dyspnee",
+        "forme": "Dyspnée",
+        "relation": "associatif"
+      }
+    ],
+    "lsf": {
+      "type": null,
+      "src": null,
+      "gloses": [],
+      "hamnosys": ""
+    }
+  },
+  {
+    "id": 3,
+    "slug": "dyspnee",
+    "forme": "Dyspnée",
+    "grammaire": {
+      "abreviation": "n.f.",
+      "libelle": "nom féminin"
+    },
+    "domaine": "Pneumologie",
+    "marque_usage": "",
+    "def_simple": "La respiration est difficile. La personne doit forcer pour respirer.",
+    "def_attestee": "Respiration difficile ou forcée.",
+    "def_source": "MeSH, via HeTOP.",
+    "contresens": null,
+    "exemple": "Il présente depuis plusieurs mois une dyspnée d'effort.",
+    "exemple_source": "PARHAF, parhaf-01794.txt",
+    "image": "images/termes/dyspnee/dyspnee.jpg",
+    "falc": [
+      {
+        "src": "images/falc/dyspnee/1_normal.png",
+        "texte": "Respiration normale"
+      },
+      {
+        "src": "images/falc/dyspnee/2_difficile.png",
+        "texte": "Respiration difficile →\nil faut forcer"
+      }
+    ],
+    "parties_corps": [
+      {
+        "id": 3,
+        "label": "Poumons",
+        "x": 236,
+        "y": 168,
+        "sexe": null
+      }
+    ],
+    "glossaire": [],
+    "categories": [],
+    "parcours": [
+      {
+        "ordre": 1,
+        "icon": null,
+        "label": "Consultation (décrire la gêne)",
+        "description": null
+      },
+      {
+        "ordre": 2,
+        "icon": null,
+        "label": "Examens (recherche de la cause)",
+        "description": null
+      },
+      {
+        "ordre": 3,
+        "icon": null,
+        "label": "Traitement de la cause",
+        "description": null
+      }
+    ],
+    "reseau": [
+      {
+        "slug": "pneumothorax",
+        "forme": "Pneumothorax",
+        "relation": "associatif"
+      },
+      {
+        "slug": "bronchopneumopathie",
+        "forme": "Bronchopneumopathie",
+        "relation": "associatif"
+      }
+    ],
+    "lsf": {
+      "type": "fichier",
+      "src": "images/video_lsf/dyspnee.mp4",
+      "gloses": [],
+      "hamnosys": ""
+    }
+  },
+  {
+    "id": 4,
+    "slug": "coronaropathie",
+    "forme": "Coronaropathie",
+    "grammaire": {
+      "abreviation": "n.f.",
+      "libelle": "nom féminin"
+    },
+    "domaine": "Cardiologie",
+    "marque_usage": "",
+    "def_simple": "Du gras, du calcium et d'autres dépôts s'accumulent dans les tuyaux qui portent le sang au cœur. On appelle ce dépôt une plaque. Ces plaques laissent passer moins de sang vers le muscle du cœur. Quand il passe trop peu de sang, le cœur s'abîme. Cela donne souvent des douleurs dans la poitrine.",
+    "def_attestee": "L'athérosclérose est l'accumulation à l'intérieur des artères coronaires de cholestérol, d'acides gras, de calcium, de tissu conjonctif fibreux et de cellules (notamment des macrophages) ; ce dépôt est appelé plaque. Ces plaques réduisent le flux sanguin à destination du muscle cardiaque à travers les artères coronaires ; lorsque cette réduction est significative, elle s'accompagne de lésions cardiaques qui, souvent, provoquent des symptômes tels que des douleurs thoraciques.",
+    "def_source": "CIM-11 (OMS), via HeTOP.",
+    "contresens": null,
+    "exemple": "Motif d'hospitalisation : angor d'effort sur coronaropathie.",
+    "exemple_source": "PARHAF, parhaf-01751.txt",
+    "image": "images/termes/coronaropathie/coronaropathie.png",
+    "falc": [
+      {
+        "src": "images/falc/coronaropathie/1_tuyau_libre.png",
+        "texte": "Tuyau libre →\nle sang passe"
+      },
+      {
+        "src": "images/falc/coronaropathie/2_plaque.png",
+        "texte": "Plaque de gras →\nle sang passe mal"
+      },
+      {
+        "src": "images/falc/coronaropathie/3_muscle.png",
+        "texte": "Moins de sang →\nle cœur s'abîme"
+      }
+    ],
+    "parties_corps": [
+      {
+        "id": 2,
+        "label": "Cœur",
+        "x": 206,
+        "y": 172,
+        "sexe": null
+      }
+    ],
+    "glossaire": [
+      {
+        "mot": "artères coronaires",
+        "explication": "Artères qui apportent le sang au muscle du cœur."
+      }
+    ],
+    "categories": [],
+    "parcours": [
+      {
+        "ordre": 1,
+        "icon": null,
+        "label": "Consultation cardiologue",
+        "description": null
+      },
+      {
+        "ordre": 2,
+        "icon": null,
+        "label": "Examens (ECG, effort, imagerie)",
+        "description": null
+      },
+      {
+        "ordre": 3,
+        "icon": null,
+        "label": "Coronarographie",
+        "description": null
+      },
+      {
+        "ordre": 4,
+        "icon": null,
+        "label": "Traitement (médicaments, angioplastie)",
+        "description": null
+      },
+      {
+        "ordre": 5,
+        "icon": null,
+        "label": "Suivi (ALD, réadaptation)",
+        "description": null
+      }
+    ],
+    "reseau": [
+      {
+        "slug": "cardiomyopathie",
+        "forme": "Cardiomyopathie",
+        "relation": "associatif"
+      },
+      {
+        "slug": "coronarographie",
+        "forme": "Coronarographie",
+        "relation": "associatif"
+      }
+    ],
+    "lsf": {
+      "type": null,
+      "src": null,
+      "gloses": [],
+      "hamnosys": ""
+    }
+  },
+  {
+    "id": 5,
+    "slug": "cardiomyopathie",
+    "forme": "Cardiomyopathie",
+    "grammaire": {
+      "abreviation": "n.f.",
+      "libelle": "nom féminin"
+    },
+    "domaine": "Cardiologie",
+    "marque_usage": "",
+    "def_simple": "C'est une maladie du muscle du cœur. Le muscle du cœur est mal formé et il fonctionne mal. Ce n'est pas une maladie des artères du cœur. Ce n'est pas une tension trop forte. Ce n'est pas une maladie des valves du cœur. Ce n'est pas une maladie du cœur présente à la naissance. Aucune de ces maladies n'explique le problème du muscle.",
+    "def_attestee": "Il s'agit de troubles myocardiques dans lesquels le muscle cardiaque est structurellement et fonctionnellement anormal, sans coronaropathie, hypertension, valvulopathie ou cardiopathie congénitale qui puissent justifier l'anomalie myocardique présente.",
+    "def_source": "CIM-11 (OMS), via HeTOP.",
+    "contresens": null,
+    "exemple": "Le bilan étiologique a permis le diagnostic d'une cardiomyopathie dilatée à coronaires saines.",
+    "exemple_source": "PARHAF, parhaf-05679.txt",
+    "image": "images/termes/cardiomyopathie/cardiomyopathie.png",
+    "falc": [
+      {
+        "src": "images/falc/cardiomyopathie/1_normal.png",
+        "texte": "Muscle du cœur normal"
+      },
+      {
+        "src": "images/falc/cardiomyopathie/2_malade.png",
+        "texte": "Muscle trop épais →\nle cœur marche mal"
+      }
+    ],
+    "parties_corps": [
+      {
+        "id": 2,
+        "label": "Cœur",
+        "x": 206,
+        "y": 172,
+        "sexe": null
+      }
+    ],
+    "glossaire": [
+      {
+        "mot": "myocarde",
+        "explication": "Le muscle du cœur, qui se contracte pour pomper le sang."
+      }
+    ],
+    "categories": [],
+    "parcours": [
+      {
+        "ordre": 1,
+        "icon": null,
+        "label": "Consultation",
+        "description": null
+      },
+      {
+        "ordre": 2,
+        "icon": null,
+        "label": "Examens (ECG, échographie, IRM)",
+        "description": null
+      },
+      {
+        "ordre": 3,
+        "icon": null,
+        "label": "Diagnostic",
+        "description": null
+      },
+      {
+        "ordre": 4,
+        "icon": null,
+        "label": "Traitement (médicaments, défibrillateur)",
+        "description": null
+      },
+      {
+        "ordre": 5,
+        "icon": null,
+        "label": "Suivi régulier",
+        "description": null
+      }
+    ],
+    "reseau": [
+      {
+        "slug": "coronaropathie",
+        "forme": "Coronaropathie",
+        "relation": "associatif"
+      }
+    ],
+    "lsf": {
+      "type": null,
+      "src": null,
+      "gloses": [],
+      "hamnosys": ""
+    }
+  },
+  {
+    "id": 6,
+    "slug": "coronarographie",
+    "forme": "Coronarographie",
+    "grammaire": {
+      "abreviation": "n.f.",
+      "libelle": "nom féminin"
+    },
+    "domaine": "Cardiologie",
+    "marque_usage": "",
+    "def_simple": "C'est une radio des tuyaux qui portent le sang au muscle du cœur. Avant, on injecte un produit qui rend ces tuyaux visibles sur l'image.",
+    "def_attestee": "Radiographie du système vasculaire du muscle cardiaque après injection d'une substance de contraste.",
+    "def_source": "MeSH, via HeTOP.",
+    "contresens": null,
+    "exemple": "La coronarographie est réalisée par voie radiale gauche.",
+    "exemple_source": "PARHAF, parhaf-00962.txt",
+    "image": "images/termes/coronarographie/coronarographie.png",
+    "falc": [
+      {
+        "src": "images/falc/coronarographie/1_salle.png",
+        "texte": "La personne est allongée →\nla machine prend des photos"
+      },
+      {
+        "src": "images/falc/coronarographie/2_catheter.png",
+        "texte": "Un petit tuyau entre →\npar le poignet ou par l'aine"
+      },
+      {
+        "src": "images/falc/coronarographie/3_produit.png",
+        "texte": "On injecte un produit →\nil remplit les tuyaux"
+      },
+      {
+        "src": "images/falc/coronarographie/4_image.png",
+        "texte": "Les tuyaux du cœur →\non les voit sur l'image"
+      }
+    ],
+    "parties_corps": [
+      {
+        "id": 2,
+        "label": "Cœur",
+        "x": 206,
+        "y": 172,
+        "sexe": null
+      }
+    ],
+    "glossaire": [
+      {
+        "mot": "artères coronaires",
+        "explication": "Artères qui apportent le sang au muscle du cœur."
+      }
+    ],
+    "categories": [
+      {
+        "id": 10,
+        "label": "Imagerie / radiographie"
+      }
+    ],
+    "parcours": [
+      {
+        "ordre": 1,
+        "icon": null,
+        "label": "Indication",
+        "description": null
+      },
+      {
+        "ordre": 2,
+        "icon": null,
+        "label": "Préparation (bilan sanguin, à jeun)",
+        "description": null
+      },
+      {
+        "ordre": 3,
+        "icon": null,
+        "label": "Examen (produit de contraste, images)",
+        "description": null
+      },
+      {
+        "ordre": 4,
+        "icon": null,
+        "label": "Résultats et suite",
+        "description": null
+      }
+    ],
+    "reseau": [
+      {
+        "slug": "coronaropathie",
+        "forme": "Coronaropathie",
+        "relation": "associatif"
+      }
+    ],
+    "lsf": {
+      "type": null,
+      "src": null,
+      "gloses": [],
+      "hamnosys": ""
+    }
+  },
+  {
+    "id": 7,
+    "slug": "mammographie",
+    "forme": "Mammographie",
+    "grammaire": {
+      "abreviation": "n.m.",
+      "libelle": "nom masculin"
+    },
+    "domaine": "Imagerie",
+    "marque_usage": "",
+    "def_simple": "C'est une radio du sein, avec une petite dose de rayons X. Elle sert à vérifier que tout va bien. Elle sert aussi à trouver une maladie du sein.",
+    "def_attestee": "Examen d'imagerie du sein par rayons X à faible dose, utilisé pour le dépistage et le diagnostic des lésions mammaires.",
+    "def_source": null,
+    "contresens": null,
+    "exemple": "Suivi gynécologique à jour, mammographie d'il y a 4 mois normale.",
+    "exemple_source": "PARHAF, parhaf-02847.txt",
+    "image": "images/termes/mammographie/mammographie.png",
+    "falc": [
+      {
+        "src": "images/falc/mammographie/1_examen.png",
+        "texte": "Le sein entre 2 plaques →\non prend une radio"
+      },
+      {
+        "src": "images/falc/mammographie/2_image.png",
+        "texte": "Le médecin regarde l'image"
+      }
+    ],
+    "parties_corps": [
+      {
+        "id": 9,
+        "label": "Seins",
+        "x": 198,
+        "y": 150,
+        "sexe": "F"
+      }
+    ],
+    "glossaire": [
+      {
+        "mot": "tomodensitométrique",
+        "explication": "Se dit des images en fines tranches obtenues au scanner."
+      }
+    ],
+    "categories": [
+      {
+        "id": 10,
+        "label": "Imagerie / radiographie"
+      }
+    ],
+    "parcours": [
+      {
+        "ordre": 1,
+        "icon": null,
+        "label": "Invitation ou prescription",
+        "description": null
+      },
+      {
+        "ordre": 2,
+        "icon": null,
+        "label": "Rendez-vous (clichés et examen clinique)",
+        "description": null
+      },
+      {
+        "ordre": 3,
+        "icon": null,
+        "label": "Résultat immédiat et 2e lecture",
+        "description": null
+      },
+      {
+        "ordre": 4,
+        "icon": null,
+        "label": "Résultats définitifs",
+        "description": null
+      }
+    ],
+    "reseau": [
+      {
+        "slug": "mastectomie",
+        "forme": "Mastectomie",
+        "relation": "associatif"
+      },
+      {
+        "slug": "carcinome",
+        "forme": "Carcinome",
+        "relation": "associatif"
+      }
+    ],
+    "lsf": {
+      "type": null,
+      "src": null,
+      "gloses": [],
+      "hamnosys": ""
+    }
+  },
+  {
+    "id": 8,
+    "slug": "mastectomie",
+    "forme": "Mastectomie",
+    "grammaire": {
+      "abreviation": "n.f.",
+      "libelle": "nom féminin"
+    },
+    "domaine": "Chirurgie",
+    "marque_usage": "",
+    "def_simple": "C'est une opération. La personne dort pendant l'opération. Le chirurgien enlève tout le sein où se trouve la tumeur. Il enlève aussi le téton.",
+    "def_attestee": "La chirurgie mammaire non conservatrice (ou mastectomie) est une intervention chirurgicale réalisée sous anesthésie générale qui consiste à enlever le sein dans lequel se situe la tumeur dans son intégralité, y compris l'aréole et le mamelon.",
+    "def_source": "cancer.fr, Institut national du cancer",
+    "contresens": null,
+    "exemple": "Une mastectomie avec curage axillaire ont été réalisés.",
+    "exemple_source": "CAS, filepdf-861-cas.txt",
+    "image": "images/termes/mastectomie/mastectomie.png",
+    "falc": [
+      {
+        "src": "images/falc/mastectomie/1_sain.png",
+        "texte": "Sein normal"
+      },
+      {
+        "src": "images/falc/mastectomie/2_tumeur.png",
+        "texte": "Tumeur dans le sein"
+      },
+      {
+        "src": "images/falc/mastectomie/3_partielle.png",
+        "texte": "On enlève une partie du sein"
+      },
+      {
+        "src": "images/falc/mastectomie/4_totale.png",
+        "texte": "On enlève tout le sein"
+      }
+    ],
+    "parties_corps": [
+      {
+        "id": 9,
+        "label": "Seins",
+        "x": 198,
+        "y": 150,
+        "sexe": "F"
+      }
+    ],
+    "glossaire": [
+      {
+        "mot": "mammaire",
+        "explication": "Qui concerne le sein."
+      }
+    ],
+    "categories": [],
+    "parcours": [
+      {
+        "ordre": 1,
+        "icon": null,
+        "label": "Consultation d'annonce",
+        "description": null
+      },
+      {
+        "ordre": 2,
+        "icon": null,
+        "label": "Bilan pré-opératoire",
+        "description": null
+      },
+      {
+        "ordre": 3,
+        "icon": null,
+        "label": "Intervention (ablation)",
+        "description": null
+      },
+      {
+        "ordre": 4,
+        "icon": null,
+        "label": "Suivi post-opératoire",
+        "description": null
+      },
+      {
+        "ordre": 5,
+        "icon": null,
+        "label": "Reconstruction éventuelle",
+        "description": null
+      }
+    ],
+    "reseau": [
+      {
+        "slug": "carcinome",
+        "forme": "Carcinome",
+        "relation": "associatif"
+      },
+      {
+        "slug": "mammographie",
+        "forme": "Mammographie",
+        "relation": "associatif"
+      }
+    ],
+    "lsf": {
+      "type": "fichier",
+      "src": "images/video_lsf/mastectomie.mp4",
+      "gloses": [],
+      "hamnosys": ""
+    }
+  },
+  {
+    "id": 9,
+    "slug": "carcinome",
+    "forme": "Carcinome",
+    "grammaire": {
+      "abreviation": "n.m.",
+      "libelle": "nom masculin"
+    },
+    "domaine": "Oncologie",
+    "marque_usage": "",
+    "def_simple": "C'est un cancer. Il part des cellules d'une fine couche qui recouvre le corps. Cette couche recouvre la peau ou l'intérieur des organes.",
+    "def_attestee": "Type de cancer qui se développe à partir des cellules d'un épithélium (tissu de revêtement des organes ou de la peau).",
+    "def_source": "Institut national du cancer, cancer.fr.",
+    "contresens": null,
+    "exemple": "Microbiopsie retrouvant du carcinome canalaire in situ.",
+    "exemple_source": "PARHAF, parhaf-02755.txt",
+    "image": "images/termes/carcinome/carcinome.png",
+    "falc": [
+      {
+        "src": "images/falc/carcinome/1_normal.png",
+        "texte": "Cellules normales →\ntoutes pareilles"
+      },
+      {
+        "src": "images/falc/carcinome/2_cancer.png",
+        "texte": "Une cellule change →\nc'est le cancer"
+      },
+      {
+        "src": "images/falc/carcinome/3_stade4.png",
+        "texte": "Tumeur →\nelle passe dans le sang"
+      }
+    ],
+    "parties_corps": [
+      {
+        "id": 9,
+        "label": "Seins",
+        "x": 198,
+        "y": 150,
+        "sexe": "F"
+      },
+      {
+        "id": 3,
+        "label": "Poumons",
+        "x": 236,
+        "y": 168,
+        "sexe": null
+      }
+    ],
+    "glossaire": [
+      {
+        "mot": "épithélium",
+        "explication": "Tissu qui recouvre les organes et les cavités du corps."
+      }
+    ],
+    "categories": [],
+    "parcours": [
+      {
+        "ordre": 1,
+        "icon": null,
+        "label": "Dépistage ou consultation",
+        "description": null
+      },
+      {
+        "ordre": 2,
+        "icon": null,
+        "label": "Diagnostic (biopsie)",
+        "description": null
+      },
+      {
+        "ordre": 3,
+        "icon": null,
+        "label": "RCP (réunion pluridisciplinaire)",
+        "description": null
+      },
+      {
+        "ordre": 4,
+        "icon": null,
+        "label": "Programme de soins",
+        "description": null
+      },
+      {
+        "ordre": 5,
+        "icon": null,
+        "label": "Traitement",
+        "description": null
+      },
+      {
+        "ordre": 6,
+        "icon": null,
+        "label": "Suivi et soutien",
+        "description": null
+      }
+    ],
+    "reseau": [
+      {
+        "slug": "mastectomie",
+        "forme": "Mastectomie",
+        "relation": "associatif"
+      },
+      {
+        "slug": "mammographie",
+        "forme": "Mammographie",
+        "relation": "associatif"
+      }
+    ],
+    "lsf": {
+      "type": null,
+      "src": null,
+      "gloses": [],
+      "hamnosys": ""
+    }
+  },
+  {
+    "id": 10,
+    "slug": "nephropathie",
+    "forme": "Néphropathie",
+    "grammaire": {
+      "abreviation": "n.f.",
+      "libelle": "nom féminin"
+    },
+    "domaine": "Néphrologie",
+    "marque_usage": "",
+    "def_simple": "C'est une maladie du rein. Ce mot désigne toutes les maladies du rein.",
+    "def_attestee": "Maladies du rein : terme générique désignant toute atteinte du rein.",
+    "def_source": "MeSH (Maladies du rein), via HeTOP.",
+    "contresens": null,
+    "exemple": "Néphropathie chronique modérée connue, à surveiller sous traitement.",
+    "exemple_source": "PARHAF, parhaf-03763.txt",
+    "image": "images/termes/nephropathie/nephropathie.png",
+    "falc": [
+      {
+        "src": "images/falc/nephropathie/1_normal.png",
+        "texte": "Rein normal →\nil filtre le sang"
+      },
+      {
+        "src": "images/falc/nephropathie/2_malade.png",
+        "texte": "Rein malade →\nil filtre mal"
+      }
+    ],
+    "parties_corps": [
+      {
+        "id": 5,
+        "label": "Appareil urinaire",
+        "x": 220,
+        "y": 262,
+        "sexe": null
+      }
+    ],
+    "glossaire": [
+      {
+        "mot": "rein",
+        "explication": "Organe qui filtre le sang et fabrique l'urine."
+      }
+    ],
+    "categories": [],
+    "parcours": [
+      {
+        "ordre": 1,
+        "icon": null,
+        "label": "Consultation ou dépistage",
+        "description": null
+      },
+      {
+        "ordre": 2,
+        "icon": null,
+        "label": "Examens (sang, urines, DFG)",
+        "description": null
+      },
+      {
+        "ordre": 3,
+        "icon": null,
+        "label": "Diagnostic et stade",
+        "description": null
+      },
+      {
+        "ordre": 4,
+        "icon": null,
+        "label": "Traitement (médicaments, tension)",
+        "description": null
+      },
+      {
+        "ordre": 5,
+        "icon": null,
+        "label": "Suivi néphrologue",
+        "description": null
+      }
+    ],
+    "reseau": [
+      {
+        "slug": "hydronephrose",
+        "forme": "Hydronéphrose",
+        "relation": "specifique"
+      }
+    ],
+    "lsf": {
+      "type": null,
+      "src": null,
+      "gloses": [],
+      "hamnosys": ""
+    }
+  },
+  {
+    "id": 11,
+    "slug": "hydronephrose",
+    "forme": "Hydronéphrose",
+    "grammaire": {
+      "abreviation": "n.f.",
+      "libelle": "nom féminin"
+    },
+    "domaine": "Urologie",
+    "marque_usage": "",
+    "def_simple": "L'intérieur du rein gonfle. C'est le plus souvent parce que le passage de l'urine est bouché.",
+    "def_attestee": "Dilatation du bassinet et des calices du rein, le plus souvent due à une obstruction des voies urinaires (syndrome de la jonction pyélo-urétérale).",
+    "def_source": "Association Française d'Urologie.",
+    "contresens": null,
+    "exemple": "Uropathie obstructive chronique avec hydronéphrose droite modérée.",
+    "exemple_source": "PARHAF, parhaf-03761.txt",
+    "image": "images/termes/hydronephrose/hydronephrose.png",
+    "falc": [
+      {
+        "src": "images/falc/hydronephrose/1_libre.png",
+        "texte": "Urine →\nelle descend"
+      },
+      {
+        "src": "images/falc/hydronephrose/2_bouche.png",
+        "texte": "Tuyau bouché →\nle rein gonfle"
+      }
+    ],
+    "parties_corps": [
+      {
+        "id": 5,
+        "label": "Appareil urinaire",
+        "x": 220,
+        "y": 262,
+        "sexe": null
+      }
+    ],
+    "glossaire": [
+      {
+        "mot": "cavités rénales",
+        "explication": "Cavités du rein qui recueillent l'urine."
+      }
+    ],
+    "categories": [],
+    "parcours": [
+      {
+        "ordre": 1,
+        "icon": null,
+        "label": "Consultation",
+        "description": null
+      },
+      {
+        "ordre": 2,
+        "icon": null,
+        "label": "Échographie (dilatation)",
+        "description": null
+      },
+      {
+        "ordre": 3,
+        "icon": null,
+        "label": "Bilan (scanner, cause)",
+        "description": null
+      },
+      {
+        "ordre": 4,
+        "icon": null,
+        "label": "Traitement (lever l'obstacle) et suivi",
+        "description": null
+      }
+    ],
+    "reseau": [
+      {
+        "slug": "nephropathie",
+        "forme": "Néphropathie",
+        "relation": "generique"
+      }
+    ],
+    "lsf": {
+      "type": null,
+      "src": null,
+      "gloses": [],
+      "hamnosys": ""
+    }
+  },
+  {
+    "id": 12,
+    "slug": "thrombopenie",
+    "forme": "Thrombopénie",
+    "grammaire": {
+      "abreviation": "n.f.",
+      "libelle": "nom féminin"
+    },
+    "domaine": "Hématologie",
+    "marque_usage": "",
+    "def_simple": "Il y a moins de plaquettes dans le sang.",
+    "def_attestee": "Diminution du nombre de plaquettes sanguines.",
+    "def_source": "MeSH, via HeTOP.",
+    "contresens": null,
+    "exemple": "Thrombopénie grade I chimio-induite de récupération spontanée.",
+    "exemple_source": "PARHAF, parhaf-00555.txt",
+    "image": "images/termes/thrombopenie/thrombopenie.png",
+    "falc": [
+      {
+        "src": "images/falc/thrombopenie/1_normal.png",
+        "texte": "Beaucoup de plaquettes"
+      },
+      {
+        "src": "images/falc/thrombopenie/2_moins.png",
+        "texte": "Moins de plaquettes"
+      }
+    ],
+    "parties_corps": [],
+    "glossaire": [
+      {
+        "mot": "plaquettes",
+        "explication": "Cellules du sang qui aident à former les caillots."
+      }
+    ],
+    "categories": [
+      {
+        "id": 4,
+        "label": "Maladies du sang"
+      }
+    ],
+    "parcours": [
+      {
+        "ordre": 1,
+        "icon": null,
+        "label": "Consultation",
+        "description": null
+      },
+      {
+        "ordre": 2,
+        "icon": null,
+        "label": "Numération (confirmation)",
+        "description": null
+      },
+      {
+        "ordre": 3,
+        "icon": null,
+        "label": "Bilan (recherche de la cause)",
+        "description": null
+      },
+      {
+        "ordre": 4,
+        "icon": null,
+        "label": "Traitement selon la cause et suivi",
+        "description": null
+      }
+    ],
+    "reseau": [],
+    "lsf": {
+      "type": null,
+      "src": null,
+      "gloses": [],
+      "hamnosys": ""
+    }
+  },
+  {
+    "id": 13,
+    "slug": "seropositivite",
+    "forme": "Séropositivité",
+    "grammaire": {
+      "abreviation": "n.f.",
+      "libelle": "nom féminin"
+    },
+    "domaine": "Infectiologie",
+    "marque_usage": "",
+    "def_simple": "Le sang contient des défenses contre le VIH. Cela montre que la personne a ce virus.",
+    "def_attestee": "Présence, dans le sang, d'anticorps dirigés contre le VIH, témoignant d'une infection par ce virus.",
+    "def_source": "ONUSIDA, Guide de terminologie.",
+    "contresens": "« Positif » ne veut pas dire « bonne nouvelle ». Être séropositif au VIH signifie que le virus est présent dans le sang.",
+    "exemple": "Une personne séropositive au VIH possède des anticorps contre le VIH qui ont été décelés lors d'un test sanguin ou salivaire.",
+    "exemple_source": "ONUSIDA, Guide de terminologie",
+    "image": "images/termes/seropositivite/seropositivite.png",
+    "falc": [
+      {
+        "src": "images/falc/seropositivite/1_ancrage.png",
+        "texte": "Virus →\nil se colle à la cellule"
+      },
+      {
+        "src": "images/falc/seropositivite/2_fusion.png",
+        "texte": "Virus →\nil entre dans la cellule"
+      },
+      {
+        "src": "images/falc/seropositivite/3_code_cellule.png",
+        "texte": "Virus →\nil change le code"
+      },
+      {
+        "src": "images/falc/seropositivite/4_noyau.png",
+        "texte": "Code changé →\nil entre dans le noyau"
+      },
+      {
+        "src": "images/falc/seropositivite/5_production.png",
+        "texte": "Cellule →\nelle fabrique des virus"
+      },
+      {
+        "src": "images/falc/seropositivite/6_corps.png",
+        "texte": "Virus →\nils partent dans le corps"
+      }
+    ],
+    "parties_corps": [],
+    "glossaire": [
+      {
+        "mot": "anticorps",
+        "explication": "Protéines fabriquées par le corps pour se défendre contre un microbe."
+      }
+    ],
+    "categories": [
+      {
+        "id": 5,
+        "label": "Maladies infectieuses"
+      }
+    ],
+    "parcours": [
+      {
+        "ordre": 1,
+        "icon": null,
+        "label": "Dépistage (test)",
+        "description": null
+      },
+      {
+        "ordre": 2,
+        "icon": null,
+        "label": "Confirmation",
+        "description": null
+      },
+      {
+        "ordre": 3,
+        "icon": null,
+        "label": "Bilan initial",
+        "description": null
+      },
+      {
+        "ordre": 4,
+        "icon": null,
+        "label": "Traitement antirétroviral",
+        "description": null
+      },
+      {
+        "ordre": 5,
+        "icon": null,
+        "label": "Suivi régulier",
+        "description": null
+      }
+    ],
+    "reseau": [
+      {
+        "slug": "seroconversion",
+        "forme": "Séroconversion",
+        "relation": "associatif"
+      },
+      {
+        "slug": "gonococcie",
+        "forme": "Gonococcie",
+        "relation": "associatif"
+      }
+    ],
+    "lsf": {
+      "type": null,
+      "src": null,
+      "gloses": [],
+      "hamnosys": ""
+    }
+  },
+  {
+    "id": 14,
+    "slug": "seroconversion",
+    "forme": "Séroconversion",
+    "grammaire": {
+      "abreviation": "n.f.",
+      "libelle": "nom féminin"
+    },
+    "domaine": "Infectiologie",
+    "marque_usage": "",
+    "def_simple": "C'est le moment où les défenses contre le VIH apparaissent dans le sang. Avant, le test ne voit rien. Après, le test est positif.",
+    "def_attestee": "Moment où les anticorps anti-VIH deviennent détectables dans le sang, marquant le passage de la séronégativité à la séropositivité.",
+    "def_source": "ONUSIDA, Guide de terminologie.",
+    "contresens": null,
+    "exemple": "La séroconversion au VIH est la période qui s'écoule entre l'infection par le VIH et la détection des anticorps dans l'organisme.",
+    "exemple_source": "Wiktionnaire, d'après un guide de communication sociale, 2005",
+    "image": "images/termes/seroconversion/seroconversion.png",
+    "falc": [
+      {
+        "src": "images/falc/seroconversion/1_seronegatif.png",
+        "texte": "Pas de VIH dans le sang"
+      },
+      {
+        "src": "images/falc/seroconversion/2_seropositif.png",
+        "texte": "VIH dans le sang"
+      }
+    ],
+    "parties_corps": [],
+    "glossaire": [
+      {
+        "mot": "anticorps",
+        "explication": "Protéines fabriquées par le corps pour se défendre contre un microbe."
+      }
+    ],
+    "categories": [
+      {
+        "id": 5,
+        "label": "Maladies infectieuses"
+      }
+    ],
+    "parcours": [
+      {
+        "ordre": 1,
+        "icon": null,
+        "label": "Exposition ou symptômes",
+        "description": null
+      },
+      {
+        "ordre": 2,
+        "icon": null,
+        "label": "Test précoce (PCR)",
+        "description": null
+      },
+      {
+        "ordre": 3,
+        "icon": null,
+        "label": "Confirmation",
+        "description": null
+      },
+      {
+        "ordre": 4,
+        "icon": null,
+        "label": "Traitement précoce et suivi",
+        "description": null
+      }
+    ],
+    "reseau": [
+      {
+        "slug": "seropositivite",
+        "forme": "Séropositivité",
+        "relation": "associatif"
+      }
+    ],
+    "lsf": {
+      "type": null,
+      "src": null,
+      "gloses": [],
+      "hamnosys": ""
+    }
+  },
+  {
+    "id": 15,
+    "slug": "gonococcie",
+    "forme": "Gonococcie",
+    "grammaire": {
+      "abreviation": "n.f.",
+      "libelle": "nom féminin"
+    },
+    "domaine": "Infectiologie",
+    "marque_usage": "fam.",
+    "def_simple": "Infection par un microbe, attrapée en faisant l'amour. On dit aussi blenno ; fam. chaude-pisse, castapiane.",
+    "def_attestee": "Infection bactérienne sexuellement transmissible due au gonocoque (Neisseria gonorrhoeae) ; aussi appelée blennorragie ou gonorrhée.",
+    "def_source": "Santé publique France.",
+    "contresens": null,
+    "exemple": "Gonococcie contractée à l'armée à l'âge de 19 ans.",
+    "exemple_source": "PARHAF, parhaf-04529.txt",
+    "image": "images/termes/gonococcie/gonococcie.png",
+    "falc": [
+      {
+        "src": "images/falc/gonococcie/1_bacterie.png",
+        "texte": "Microbe →\nle gonocoque"
+      },
+      {
+        "src": "images/falc/gonococcie/2_transmission.png",
+        "texte": "On l'attrape en faisant l'amour"
+      }
+    ],
+    "parties_corps": [],
+    "glossaire": [
+      {
+        "mot": "bactérie",
+        "explication": "Microbe vivant qui peut être combattu par des antibiotiques."
+      }
+    ],
+    "categories": [
+      {
+        "id": 5,
+        "label": "Maladies infectieuses"
+      }
+    ],
+    "parcours": [
+      {
+        "ordre": 1,
+        "icon": null,
+        "label": "Consultation ou dépistage",
+        "description": null
+      },
+      {
+        "ordre": 2,
+        "icon": null,
+        "label": "Prélèvement (local, urine)",
+        "description": null
+      },
+      {
+        "ordre": 3,
+        "icon": null,
+        "label": "Traitement (antibiotique)",
+        "description": null
+      },
+      {
+        "ordre": 4,
+        "icon": null,
+        "label": "Partenaires et contrôle",
+        "description": null
+      }
+    ],
+    "reseau": [
+      {
+        "slug": "seropositivite",
+        "forme": "Séropositivité",
+        "relation": "associatif"
+      }
+    ],
+    "lsf": {
+      "type": null,
+      "src": null,
+      "gloses": [],
+      "hamnosys": ""
+    }
+  }
+]

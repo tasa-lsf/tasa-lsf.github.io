@@ -1,0 +1,206 @@
+[
+  {
+    "idGlossaire": 1,
+    "mot": "cavité pleurale",
+    "explication": "Espace situé entre le poumon et la paroi du thorax.",
+    "image": null
+  },
+  {
+    "idGlossaire": 2,
+    "mot": "bronches",
+    "explication": "Conduits qui amènent l'air dans les poumons.",
+    "image": null
+  },
+  {
+    "idGlossaire": 3,
+    "mot": "artères coronaires",
+    "explication": "Artères qui apportent le sang au muscle du cœur.",
+    "image": null
+  },
+  {
+    "idGlossaire": 4,
+    "mot": "myocarde",
+    "explication": "Le muscle du cœur, qui se contracte pour pomper le sang.",
+    "image": null
+  },
+  {
+    "idGlossaire": 5,
+    "mot": "tomodensitométrique",
+    "explication": "Se dit des images en fines tranches obtenues au scanner.",
+    "image": null
+  },
+  {
+    "idGlossaire": 6,
+    "mot": "mammaire",
+    "explication": "Qui concerne le sein.",
+    "image": null
+  },
+  {
+    "idGlossaire": 7,
+    "mot": "épithélium",
+    "explication": "Tissu qui recouvre les organes et les cavités du corps.",
+    "image": null
+  },
+  {
+    "idGlossaire": 8,
+    "mot": "rein",
+    "explication": "Organe qui filtre le sang et fabrique l'urine.",
+    "image": null
+  },
+  {
+    "idGlossaire": 9,
+    "mot": "cavités rénales",
+    "explication": "Cavités du rein qui recueillent l'urine.",
+    "image": null
+  },
+  {
+    "idGlossaire": 10,
+    "mot": "plaquettes",
+    "explication": "Cellules du sang qui aident à former les caillots.",
+    "image": null
+  },
+  {
+    "idGlossaire": 11,
+    "mot": "anticorps",
+    "explication": "Protéines fabriquées par le corps pour se défendre contre un microbe.",
+    "image": null
+  },
+  {
+    "idGlossaire": 12,
+    "mot": "bactérie",
+    "explication": "Microbe vivant qui peut être combattu par des antibiotiques.",
+    "image": null
+  },
+  {
+    "idGlossaire": 13,
+    "mot": "échographie",
+    "explication": "Examen qui montre l'intérieur du corps grâce à des ultrasons, sans rayons X.",
+    "image": null
+  },
+  {
+    "idGlossaire": 14,
+    "mot": "scanner",
+    "explication": "Appareil qui prend des images du corps en fines tranches (radiographies successives).",
+    "image": null
+  },
+  {
+    "idGlossaire": 15,
+    "mot": "observance thérapeutique",
+    "explication": "Le fait de bien suivre son traitement (doses, horaires, régularité), y compris des injections régulières.",
+    "image": null
+  },
+  {
+    "idGlossaire": 16,
+    "mot": "lésions",
+    "explication": "Parties du corps abîmées par une maladie ou une blessure.",
+    "image": null
+  },
+  {
+    "idGlossaire": 17,
+    "mot": "myocardiques",
+    "explication": "Qui concerne le myocarde, le muscle du cœur.",
+    "image": null
+  },
+  {
+    "idGlossaire": 18,
+    "mot": "valvulopathie",
+    "explication": "Maladie des valves du cœur (les clapets qui règlent le passage du sang).",
+    "image": null
+  },
+  {
+    "idGlossaire": 19,
+    "mot": "cardiopathie congénitale",
+    "explication": "Maladie du cœur présente dès la naissance.",
+    "image": null
+  },
+  {
+    "idGlossaire": 20,
+    "mot": "espace pleural",
+    "explication": "Espace entre le poumon et la paroi du thorax.",
+    "image": null
+  },
+  {
+    "idGlossaire": 21,
+    "mot": "trauma",
+    "explication": "Un choc, une blessure.",
+    "image": null
+  },
+  {
+    "idGlossaire": 22,
+    "mot": "inflammation",
+    "explication": "Réaction du corps : la zone gonfle, rougit et chauffe.",
+    "image": null
+  },
+  {
+    "idGlossaire": 23,
+    "mot": "alvéoles",
+    "explication": "Petits sacs d'air au bout des bronches, où passe l'oxygène.",
+    "image": null
+  },
+  {
+    "idGlossaire": 24,
+    "mot": "athérosclérose",
+    "explication": "Dépôt de gras sur la paroi des artères, qui les rétrécit.",
+    "image": null
+  },
+  {
+    "idGlossaire": 25,
+    "mot": "macrophages",
+    "explication": "Cellules du corps qui « avalent » les déchets et les microbes.",
+    "image": null
+  },
+  {
+    "idGlossaire": 26,
+    "mot": "substance de contraste",
+    "explication": "Produit injecté qui rend les vaisseaux bien visibles sur l'image.",
+    "image": null
+  },
+  {
+    "idGlossaire": 27,
+    "mot": "anesthésie générale",
+    "explication": "Endormissement complet pendant l'opération.",
+    "image": null
+  },
+  {
+    "idGlossaire": 28,
+    "mot": "aréole",
+    "explication": "Zone colorée autour du bout du sein.",
+    "image": null
+  },
+  {
+    "idGlossaire": 29,
+    "mot": "mamelon",
+    "explication": "Le bout du sein (le téton).",
+    "image": null
+  },
+  {
+    "idGlossaire": 30,
+    "mot": "bassinet",
+    "explication": "Cavité du rein qui recueille l'urine.",
+    "image": null
+  },
+  {
+    "idGlossaire": 31,
+    "mot": "calices",
+    "explication": "Cavités du rein qui recueillent l'urine.",
+    "image": null
+  },
+  {
+    "idGlossaire": 32,
+    "mot": "gonocoque",
+    "explication": "Le microbe responsable de cette infection.",
+    "image": null
+  },
+  {
+    "idGlossaire": 33,
+    "mot": "séronégativité",
+    "explication": "État où le test ne détecte pas d'anticorps (test négatif).",
+    "image": null
+  },
+  {
+    "idGlossaire": 34,
+    "mot": "séropositivité",
+    "explication": "État où le test détecte des anticorps (test positif).",
+    "image": null
+  }
+]

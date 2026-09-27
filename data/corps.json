@@ -1,0 +1,230 @@
+{
+  "image": "images/corps/homme_femme.png",
+  "points": [
+    {
+      "idPartie": 1,
+      "left": 49,
+      "top": 7
+    },
+    {
+      "idPartie": 2,
+      "left": 51,
+      "top": 30
+    },
+    {
+      "idPartie": 3,
+      "left": 30,
+      "top": 29
+    },
+    {
+      "idPartie": 4,
+      "left": 50,
+      "top": 40
+    },
+    {
+      "idPartie": 5,
+      "left": 50,
+      "top": 47
+    },
+    {
+      "idPartie": 6,
+      "left": 20,
+      "top": 60
+    },
+    {
+      "idPartie": 7,
+      "left": 70,
+      "top": 71
+    },
+    {
+      "idPartie": 8,
+      "left": 16,
+      "top": 19
+    },
+    {
+      "idPartie": 8,
+      "left": 30,
+      "top": 92
+    },
+    {
+      "idPartie": 9,
+      "left": 67,
+      "top": 27
+    },
+    {
+      "idPartie": 10,
+      "left": 41,
+      "top": 52
+    },
+    {
+      "idPartie": 11,
+      "left": 59,
+      "top": 52
+    }
+  ],
+  "zones": [
+    {
+      "id": 1,
+      "label": "Tête et cou",
+      "dot_x": 220,
+      "dot_y": 70,
+      "sexe": null,
+      "ordre": 1,
+      "termes": []
+    },
+    {
+      "id": 2,
+      "label": "Cœur",
+      "dot_x": 206,
+      "dot_y": 172,
+      "sexe": null,
+      "ordre": 2,
+      "termes": [
+        {
+          "slug": "coronaropathie",
+          "forme": "Coronaropathie",
+          "image": "images/termes/coronaropathie/coronaropathie.png"
+        },
+        {
+          "slug": "cardiomyopathie",
+          "forme": "Cardiomyopathie",
+          "image": "images/termes/cardiomyopathie/cardiomyopathie.png"
+        },
+        {
+          "slug": "coronarographie",
+          "forme": "Coronarographie",
+          "image": "images/termes/coronarographie/coronarographie.png"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "label": "Poumons",
+      "dot_x": 236,
+      "dot_y": 168,
+      "sexe": null,
+      "ordre": 3,
+      "termes": [
+        {
+          "slug": "pneumothorax",
+          "forme": "Pneumothorax",
+          "image": "images/termes/pneumothorax/pneumothorax.png"
+        },
+        {
+          "slug": "bronchopneumopathie",
+          "forme": "Bronchopneumopathie",
+          "image": "images/termes/bronchopneumopathie/bronchopneumopathie.png"
+        },
+        {
+          "slug": "dyspnee",
+          "forme": "Dyspnée",
+          "image": "images/termes/dyspnee/dyspnee.jpg"
+        },
+        {
+          "slug": "carcinome",
+          "forme": "Carcinome",
+          "image": "images/termes/carcinome/carcinome.png"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "label": "Appareil digestif",
+      "dot_x": 220,
+      "dot_y": 220,
+      "sexe": null,
+      "ordre": 4,
+      "termes": []
+    },
+    {
+      "id": 5,
+      "label": "Appareil urinaire",
+      "dot_x": 220,
+      "dot_y": 262,
+      "sexe": null,
+      "ordre": 5,
+      "termes": [
+        {
+          "slug": "nephropathie",
+          "forme": "Néphropathie",
+          "image": "images/termes/nephropathie/nephropathie.png"
+        },
+        {
+          "slug": "hydronephrose",
+          "forme": "Hydronéphrose",
+          "image": "images/termes/hydronephrose/hydronephrose.png"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "label": "Bras",
+      "dot_x": null,
+      "dot_y": null,
+      "sexe": null,
+      "ordre": 6,
+      "termes": []
+    },
+    {
+      "id": 7,
+      "label": "Jambes",
+      "dot_x": null,
+      "dot_y": null,
+      "sexe": null,
+      "ordre": 7,
+      "termes": []
+    },
+    {
+      "id": 8,
+      "label": "Articulations",
+      "dot_x": null,
+      "dot_y": null,
+      "sexe": null,
+      "ordre": 8,
+      "termes": []
+    },
+    {
+      "id": 9,
+      "label": "Seins",
+      "dot_x": 198,
+      "dot_y": 150,
+      "sexe": "F",
+      "ordre": 9,
+      "termes": [
+        {
+          "slug": "mastectomie",
+          "forme": "Mastectomie",
+          "image": "images/termes/mastectomie/mastectomie.png"
+        },
+        {
+          "slug": "carcinome",
+          "forme": "Carcinome",
+          "image": "images/termes/carcinome/carcinome.png"
+        },
+        {
+          "slug": "mammographie",
+          "forme": "Mammographie",
+          "image": "images/termes/mammographie/mammographie.png"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "label": "Organes génitaux féminins",
+      "dot_x": 220,
+      "dot_y": 300,
+      "sexe": "F",
+      "ordre": 10,
+      "termes": []
+    },
+    {
+      "id": 11,
+      "label": "Organes génitaux masculins",
+      "dot_x": 220,
+      "dot_y": 300,
+      "sexe": "H",
+      "ordre": 11,
+      "termes": []
+    }
+  ]
+}

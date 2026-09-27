@@ -1,0 +1,111 @@
+[
+  {
+    "id": 1,
+    "label": "Corps humain",
+    "idParent": null,
+    "type": "corps",
+    "sexe": null,
+    "icon": "body",
+    "ordre": 1,
+    "termes": []
+  },
+  {
+    "id": 4,
+    "label": "Maladies du sang",
+    "idParent": null,
+    "type": "groupe",
+    "sexe": null,
+    "icon": "blood",
+    "ordre": 2,
+    "termes": [
+      "thrombopenie"
+    ]
+  },
+  {
+    "id": 5,
+    "label": "Maladies infectieuses",
+    "idParent": null,
+    "type": "groupe",
+    "sexe": null,
+    "icon": "blood",
+    "ordre": 3,
+    "termes": [
+      "seropositivite",
+      "seroconversion",
+      "gonococcie"
+    ]
+  },
+  {
+    "id": 6,
+    "label": "Lieux de soin",
+    "idParent": null,
+    "type": "groupe",
+    "sexe": null,
+    "icon": "places",
+    "ordre": 4,
+    "termes": []
+  },
+  {
+    "id": 7,
+    "label": "Hôpital",
+    "idParent": 6,
+    "type": "groupe",
+    "sexe": null,
+    "icon": "places",
+    "ordre": 1,
+    "termes": []
+  },
+  {
+    "id": 8,
+    "label": "Cabinet de ville",
+    "idParent": 6,
+    "type": "groupe",
+    "sexe": null,
+    "icon": "places",
+    "ordre": 2,
+    "termes": []
+  },
+  {
+    "id": 9,
+    "label": "Cabinet d'examen",
+    "idParent": 6,
+    "type": "groupe",
+    "sexe": null,
+    "icon": "places",
+    "ordre": 3,
+    "termes": []
+  },
+  {
+    "id": 10,
+    "label": "Imagerie / radiographie",
+    "idParent": 9,
+    "type": "groupe",
+    "sexe": null,
+    "icon": "scan",
+    "ordre": 1,
+    "termes": [
+      "coronarographie",
+      "mammographie"
+    ]
+  },
+  {
+    "id": 11,
+    "label": "Infirmier",
+    "idParent": 9,
+    "type": "groupe",
+    "sexe": null,
+    "icon": "consult",
+    "ordre": 2,
+    "termes": []
+  },
+  {
+    "id": 12,
+    "label": "Médical",
+    "idParent": 9,
+    "type": "groupe",
+    "sexe": null,
+    "icon": "consult",
+    "ordre": 3,
+    "termes": []
+  }
+]

@@ -1,0 +1,162 @@
+/* ==========================================================================
+   TASA-LSF — styles du site (vues) : ici l'entrée par le corps.
+   Réutilise styles.css pour les polices, les 3 modes et le panneau d'accessibilité.
+   ========================================================================== */
+
+/* L'attribut hidden doit toujours masquer, même quand un display est fixé plus bas. */
+[hidden]{ display:none !important; }
+
+:root{
+  --bleu:#80A0F9; --sur-zone:#000; --zline:#CBD8EA; --gris-pill:#6B7688; --vert:#97D893; --rose:#FC95E8;
+}
+:root[data-mode="dark"]{ --bleu:#2E3F6B; --sur-zone:#EAF1FB; --zline:#2A3B5A; --gris-pill:#556;
+  --jaune:#6A5A22; --vert:#2F6B3F; --rose:#7A2E70; }
+:root[data-mode="nb"]{ --bleu:#FFFFFF; --sur-zone:#000; --zline:#000; --gris-pill:#000;
+  --jaune:#FFFFFF; --vert:#FFFFFF; --rose:#FFFFFF; }
+
+/* ---- En-tête ---- */
+.site-top{ display:flex; align-items:center; gap:16px; padding:12px 22px; border-bottom:1px solid var(--bord); }
+.site-top .logo{ width:auto; height:44px; margin:0; padding:0; background:none; border:none; }
+.site-top .fil{ margin-left:auto; color:var(--gris); font-weight:700; text-transform:uppercase; letter-spacing:.03em; font-size:.9rem; }
+
+/* ---- Conteneur de vue ---- */
+.vue{ max-width:1100px; margin:0 auto; padding:22px; }
+.vue-titre{ margin:0 0 4px; font-size:1.6rem; text-transform:uppercase; letter-spacing:.02em; }
+.vue-sous{ margin:0 0 18px; color:var(--gris); }
+
+/* ---- Entrée par le corps ---- */
+.corps-layout{ display:grid; grid-template-columns:36% 64%; gap:0; border:1px solid var(--zline); }
+.col-corps{ background:var(--bleu); border-right:1px solid var(--zline); padding:20px; display:flex; flex-direction:column; }
+.col-corps .sous{ font-weight:800; text-transform:uppercase; letter-spacing:.03em; margin-bottom:12px; font-size:1.05rem; color:var(--sur-zone); }
+.body{ background:#fff; border:1px solid var(--zline); padding:12px; display:flex; justify-content:center; }
+.body-inner{ position:relative; aspect-ratio:188/582; max-width:100%; height:66vh; max-height:66vh; }
+.body-inner .corps{ width:100%; height:100%; object-fit:contain; display:block; }
+
+/* Ronds numérotés (positionnés en %) */
+.dot{ position:absolute; transform:translate(-50%,-50%); width:clamp(24px,3.4vw,40px); height:clamp(24px,3.4vw,40px);
+  border-radius:50%; background:var(--bleu); border:2px solid #1F3D73; color:#000; font-weight:800; font-size:1rem;
+  display:flex; align-items:center; justify-content:center; cursor:pointer; transition:background .12s, transform .12s; }
+.dot:hover, .dot:focus-visible, .dot.actif{ background:var(--jaune); transform:translate(-50%,-50%) scale(1.12); }
+.dot:focus-visible{ outline:3px solid var(--primary); outline-offset:3px; }
+:root[data-mode="nb"] .dot{ background:#fff; border-color:#000; }
+:root[data-mode="nb"] .dot:hover, :root[data-mode="nb"] .dot:focus-visible, :root[data-mode="nb"] .dot.actif{ background:#000; color:#fff; }
+
+/* Liste des zones */
+.col-zones{ background:var(--jaune); padding:20px 22px; }
+.zi{ display:flex; align-items:stretch; margin-bottom:12px; min-height:60px; background:none; border:none; padding:0; width:100%; cursor:pointer; text-align:left; font:inherit; }
+.zi .num{ background:#fff; border:1px solid var(--zline); min-width:56px; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.3rem; color:#000; }
+.zi .nom{ background:var(--bleu); border:1px solid var(--zline); flex:1; display:flex; align-items:center; gap:14px; padding:6px 16px; color:var(--sur-zone); }
+.zi .lbl{ font-weight:700; text-transform:uppercase; font-size:1.15rem; line-height:1.1; margin-right:auto; overflow-wrap:anywhere; }
+.zi .badge{ background:#fff; border:1px solid var(--zline); color:#000; font-weight:700; text-transform:uppercase; font-size:.72rem; padding:5px 12px; }
+.zi .count{ background:var(--gris-pill); color:#fff; font-weight:700; text-transform:uppercase; font-size:.72rem; padding:6px 12px; border-radius:20px; white-space:nowrap; }
+.zi .chev{ width:22px; height:22px; flex:none; margin-left:6px; align-self:center; color:var(--sur-zone); }
+.zi:hover .nom, .zi:focus-visible .nom, .zi.survol .nom{ background:var(--jaune); }
+.zi:focus-visible{ outline:3px solid var(--primary); outline-offset:3px; }
+:root[data-mode="nb"] .zi .nom{ border:2px solid #000; }
+:root[data-mode="nb"] .zi:hover .nom, :root[data-mode="nb"] .zi.survol .nom{ background:#fff; }
+
+/* ---- Tuiles des termes d'une zone ---- */
+.retour{ display:inline-flex; align-items:center; gap:8px; background:none; border:1px solid var(--bord); border-radius:8px; padding:8px 14px; font:inherit; font-weight:700; color:var(--primary); cursor:pointer; margin-bottom:16px; }
+.grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:26px; }
+.tile{ display:flex; flex-direction:column; gap:12px; background:none; border:none; padding:0; cursor:pointer; text-align:left; color:var(--encre); font:inherit; }
+.tile .box{ width:100%; aspect-ratio:1/1; background:#fff; border:1px solid var(--zline); display:flex; align-items:center; justify-content:center; }
+.tile .box img{ width:82%; height:82%; object-fit:contain; }
+.tile .nom{ font-weight:800; text-transform:uppercase; font-size:1.1rem; line-height:1.15; overflow-wrap:anywhere; }
+.tile:focus-visible{ outline:3px solid var(--primary); outline-offset:3px; }
+
+/* ==========================================================================
+   FICHE D'UN TERME (reprise fidèle du prototype)
+   ========================================================================== */
+
+/* ---- Boutons retour / accueil (images d'interface du proto) ---- */
+.titre-ligne{ display:flex; align-items:center; gap:10px; padding:14px 0 16px; }
+.btn-retour, .btn-accueil{ width:48px; height:40px; border:none; padding:0; cursor:pointer; background:transparent center / contain no-repeat; }
+.btn-retour{ background-image:url("images/interface/chevron_1.png"); transform:scaleX(-1); }
+.btn-accueil{ background-image:url("images/interface/chevron_double.png"); transform:scaleX(-1); }
+.btn-retour:focus-visible, .btn-accueil:focus-visible{ outline:3px solid var(--primary); outline-offset:3px; }
+.view-title{ margin:0 0 0 8px; font-size:1.5rem; text-transform:uppercase; letter-spacing:.02em; overflow-wrap:anywhere; }
+
+/* ---- Haut de la fiche : nom, catégorie grammaticale, domaine, illustration ---- */
+.fiche-titre{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:8px 0 14px; flex-wrap:wrap; }
+.fiche-titre-g{ display:flex; flex-direction:column; gap:10px; }
+.fiche-fleches{ display:flex; gap:10px; }
+.terme-nom{ display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
+.terme-nom .nom{ font-size:2rem; font-weight:800; text-transform:uppercase; letter-spacing:.01em; overflow-wrap:anywhere; }
+.terme-nom .gram{ font-size:1.05rem; color:var(--gris); }
+.terme-nom .marque{ font-size:1rem; font-style:italic; font-weight:700; color:var(--gris); }
+.dom{ align-self:flex-start; background:var(--jaune); border:1px solid var(--zline); color:var(--sur-zone);
+  padding:4px 12px; font-weight:700; font-size:.85rem; text-transform:uppercase; letter-spacing:.03em; }
+.terme-illu{ width:110px; height:110px; border:1px solid var(--bord); border-radius:14px; background:#fff; object-fit:contain; flex:none; cursor:zoom-in; }
+
+/* ---- Corps de la fiche : deux colonnes ---- */
+.fiche{ display:grid; grid-template-columns:38% 62%; }
+.fiche-g{ background:var(--bleu); border:1px solid var(--zline); display:flex; flex-direction:column; min-width:0; }
+.fiche-d{ display:flex; flex-direction:column; min-width:0; }
+
+/* Colonne gauche : vidéo LSF */
+.bloc-video{ padding:22px 22px 14px; }
+.bloc-video .lsf-video{ display:block; width:100%; aspect-ratio:16/9; border:0; background:#000; }
+.bloc-video .lsf-lien{ display:inline-block; margin-top:10px; background:#fff; color:#000; text-decoration:none; font-weight:700; padding:10px 16px; border:1px solid var(--zline); }
+.bloc-video .lsf-vide{ background:#fff; border:1px solid var(--zline); text-align:center; padding:30px 14px; color:#333; }
+
+/* Colonne gauche : images FALC (2 par ligne, texte au-dessus) */
+.bloc-falc{ background:var(--rose); border:1px solid var(--zline); padding:18px 22px; flex:1 1 auto; }
+.bloc-falc .lbl{ font-weight:800; font-size:1.3rem; margin-bottom:12px; color:var(--sur-zone); }
+.bloc-falc .imgs{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px 14px; }
+.bloc-falc .falc-item{ grid-row:span 2; display:grid; grid-template-rows:subgrid; }
+.bloc-falc .falc-txt{ margin:0 0 6px; font-size:.82rem; font-weight:600; line-height:1.25; color:var(--sur-zone); text-transform:uppercase; }
+.bloc-falc .falc-img{ width:100%; aspect-ratio:1/1; object-fit:contain; background:#fff; border:1px solid var(--zline); cursor:zoom-in; }
+
+/* Colonne droite : champs (définition, exemple, réseau, parcours) */
+.champ{ background:var(--jaune); border:1px solid var(--zline); padding:16px 20px; }
+.champ:has(.parcours){ background:var(--vert); }
+.champ + .champ{ border-top:3px solid rgba(0,0,0,.18); }
+:root[data-mode="nb"] .champ + .champ{ border-top:3px solid #000; }
+.champ h2{ margin:0 0 6px; font-size:1.1rem; font-weight:800; text-transform:uppercase; letter-spacing:.02em; color:var(--sur-zone); overflow-wrap:anywhere; }
+.champ h3{ margin:12px 0 4px; font-size:1.1rem; font-weight:800; text-transform:uppercase; letter-spacing:.02em; color:var(--sur-zone); overflow-wrap:anywhere; }
+.champ h3:first-child{ margin-top:0; }
+.champ p, .champ .txt{ margin:0; font-size:1.28rem; line-height:1.5; color:var(--sur-zone); overflow-wrap:break-word; }
+.champ .txt-simple{ font-size:1.28rem; line-height:1.55; }
+.champ .source{ display:block; margin-top:6px; font-size:.82rem; font-style:italic; color:var(--gris); }
+.champ .usage{ font-style:italic; }
+
+/* Marque de contresens : bande rose en bas du champ Définition */
+.contresens{ margin:14px -20px -16px; padding:14px 20px; background:var(--rose); border-top:1px solid var(--zline); overflow-wrap:break-word; color:var(--sur-zone); }
+.contresens b{ color:#5A0A2A; }
+:root[data-mode="dark"] .contresens b, :root[data-mode="nb"] .contresens b{ color:var(--sur-zone); }
+
+/* Réseau terminologique : puces */
+.reseau{ display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+.chip{ background:#fff; border:1px solid #B0892B; padding:6px 12px; font-size:.92rem; font-weight:700; color:#000; max-width:100%; overflow-wrap:break-word; cursor:pointer; font-family:inherit; }
+.chip small{ color:#7a5c12; font-weight:600; }
+:root[data-mode="nb"] .chip{ border-color:#000; }
+:root[data-mode="nb"] .chip small{ color:#000; }
+
+/* Parcours de soins : étapes verticales */
+.parcours{ display:flex; flex-direction:column; gap:10px; margin-top:10px; }
+.etape{ display:flex; align-items:center; gap:14px; background:#fff; border:1px solid var(--zline); padding:10px 12px; }
+.etape .img{ width:58px; height:58px; flex:none; background:var(--bleu); border:1px solid var(--zline); display:flex; align-items:center; justify-content:center; font-weight:800; color:#000; }
+.etape .txt b{ display:block; font-size:1.02rem; color:#000; }
+.etape .txt span{ font-size:.95rem; color:#20402a; }
+
+/* Mot de glossaire (infobulle) */
+.gloss{ font:inherit; cursor:help; color:var(--primary); font-weight:700; background:none; border:none; padding:0; border-bottom:2px dotted var(--primary); }
+.bulle{ position:absolute; z-index:150; display:none; max-width:300px; background:#fff; color:#000; border:1px solid var(--bord);
+  box-shadow:0 8px 26px rgba(0,0,0,.28); padding:12px 14px; font-size:.98rem; line-height:1.4; }
+.bulle img{ display:block; max-width:100%; margin-bottom:8px; }
+
+/* Agrandissement d'une image (zoom) */
+.agrandir-overlay{ position:fixed; inset:0; z-index:200; display:flex; align-items:center; justify-content:center; padding:24px; background:rgba(0,0,0,.88); }
+.agrandir-overlay[hidden]{ display:none; }
+.agrandir-contenu{ display:flex; align-items:center; justify-content:center; width:92vw; height:88vh; }
+.agrandir-contenu img{ width:100%; height:100%; object-fit:contain; }
+.agrandir-fermer{ position:fixed; top:16px; right:16px; width:54px; height:54px; font-size:2rem; line-height:1; background:#fff; color:#000; border:2px solid #000; cursor:pointer; }
+.agrandir-fermer:focus-visible{ outline:3px solid var(--primary); outline-offset:3px; }
+
+/* ---- Téléphones ---- */
+@media (max-width:720px){
+  .corps-layout{ grid-template-columns:1fr; }
+  .col-corps{ border-right:none; border-bottom:1px solid var(--zline); }
+  .body-inner{ height:52vh; }
+  .fiche{ grid-template-columns:1fr; }
+}

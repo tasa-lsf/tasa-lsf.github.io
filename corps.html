@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TASA-LSF, le corps</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="site.css">
+  <!-- Applique le mode mémorisé avant l'affichage (évite le flash) -->
+  <script>
+    (function () {
+      var R = document.documentElement, g = function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } };
+      var m = g('tasa-mode'); if (m && m !== 'clair') R.setAttribute('data-mode', m);
+      var t = g('tasa-taille'); if (t) R.setAttribute('data-taille', t);
+      var p = g('tasa-police'); if (p) R.setAttribute('data-police', p);
+    })();
+  </script>
+</head>
+<body>
+
+  <header class="site-top">
+    <a href="index.html" aria-label="Accueil TASA-LSF">
+      <img class="logo logo-clair" src="images/logo_tasa.svg" alt="TASA-LSF">
+      <img class="logo logo-sombre" src="images/logo_tasa_sombre.svg" alt="TASA-LSF">
+      <img class="logo logo-nb" src="images/logo_tasa_noir_blanc.svg" alt="TASA-LSF">
+    </a>
+    <span class="fil">Terminologie</span>
+  </header>
+
+  <main class="vue">
+    <h1 class="vue-titre">Le corps</h1>
+    <p class="vue-sous">Touchez une partie du corps pour voir les termes qui s'y rapportent.</p>
+
+    <!-- Entrée par le corps -->
+    <div class="corps-layout" id="corpsLayout">
+      <div class="col-corps">
+        <p class="sous">Toucher une zone</p>
+        <div class="body"><div class="body-inner" id="bodyInner">
+          <img class="corps" id="corpsImg" src="images/corps/homme_femme.png" alt="">
+        </div></div>
+      </div>
+      <div class="col-zones" id="listeZones" aria-label="Liste des zones du corps"></div>
+    </div>
+
+    <!-- Tuiles des termes d'une zone (masqué par défaut) -->
+    <section class="zone-tuiles" id="zoneTuiles" hidden>
+      <div class="titre-ligne">
+        <button class="btn-retour" type="button" onclick="retourCorps()" aria-label="Page précédente"></button>
+        <button class="btn-accueil" type="button" onclick="location.href='index.html'" aria-label="Retour à l'accueil"></button>
+        <h1 class="view-title" id="zoneTitre"></h1>
+      </div>
+      <div class="grid" id="grilleTermes"></div>
+    </section>
+  </main>
+
+  <!-- Bouton + panneau d'accessibilité (réutilisés) -->
+  <button type="button" class="acc-fab" id="accFab" aria-label="Ouvrir les réglages d'accessibilité" aria-expanded="false" onclick="basculerPanneau()">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <circle cx="12" cy="4.3" r="1.9" fill="currentColor" stroke="none"></circle>
+      <line x1="4.5" y1="8.5" x2="19.5" y2="8.5"></line>
+      <line x1="12" y1="8.5" x2="12" y2="14.5"></line>
+      <line x1="12" y1="14.5" x2="8.5" y2="21"></line>
+      <line x1="12" y1="14.5" x2="15.5" y2="21"></line>
+    </svg>
+  </button>
+
+  <section class="acc-panneau" id="accPanneau" role="dialog" aria-label="Réglages d'accessibilité">
+    <div class="acc-tete"><h2>Accessibilité</h2><button type="button" class="acc-fermer" aria-label="Fermer le panneau" onclick="basculerPanneau()">&times;</button></div>
+    <div class="acc-corps">
+      <div class="acc-ligne"><span class="lab">Contraste</span>
+        <div class="acc-choix">
+          <button type="button" class="acc-b ico actif" id="mClair" onclick="setMode('clair')">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.4"/><line x1="12" y1="3.5" x2="12" y2="5.6"/><line x1="12" y1="18.4" x2="12" y2="20.5"/><line x1="3.5" y1="12" x2="5.6" y2="12"/><line x1="18.4" y1="12" x2="20.5" y2="12"/><line x1="6" y1="6" x2="7.5" y2="7.5"/><line x1="16.5" y1="16.5" x2="18" y2="18"/><line x1="6" y1="18" x2="7.5" y2="16.5"/><line x1="16.5" y1="7.5" x2="18" y2="6"/></svg>
+            <span>Clair</span>
+          </button>
+          <button type="button" class="acc-b ico" id="mSombre" onclick="setMode('dark')">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M14.2 3.6a8.5 8.5 0 1 0 6.2 12.9A6.8 6.8 0 0 1 14.2 3.6z"/></svg>
+            <span>Sombre</span>
+          </button>
+          <button type="button" class="acc-b ico" id="mNb" onclick="setMode('nb')">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor" stroke="none"/></svg>
+            <span>Noir et blanc</span>
+          </button>
+        </div>
+      </div>
+      <div class="acc-ligne"><span class="lab">Taille du texte</span>
+        <div class="acc-choix">
+          <button type="button" class="acc-b" id="tPetit" onclick="setTaille('petit')" aria-label="Réduire le texte">A&#8722;</button>
+          <button type="button" class="acc-b actif" id="tNormal" onclick="setTaille('normal')" aria-label="Taille normale">A</button>
+          <button type="button" class="acc-b" id="tGrand" onclick="setTaille('grand')" aria-label="Agrandir le texte">A+</button>
+        </div>
+      </div>
+      <div class="acc-ligne"><span class="lab">Police</span>
+        <div class="acc-choix">
+          <button type="button" class="acc-b actif" id="pStd" onclick="setPolice('standard')">Standard</button>
+          <button type="button" class="acc-b" id="pDys" onclick="setPolice('dys')">Dys (dyslexie)</button>
+        </div>
+      </div>
+      <div class="acc-ligne"><span class="lab">Interligne</span>
+        <div class="acc-pm">
+          <button type="button" class="acc-b" onclick="pas('interligne',-1)" aria-label="Diminuer l'interligne">&#8722;</button>
+          <span class="val" id="vInter">1.6</span>
+          <button type="button" class="acc-b" onclick="pas('interligne',1)" aria-label="Augmenter l'interligne">+</button>
+        </div>
+      </div>
+      <div class="acc-ligne"><span class="lab">Espacement des lettres</span>
+        <div class="acc-pm">
+          <button type="button" class="acc-b" onclick="pas('lettres',-1)" aria-label="Diminuer l'espacement">&#8722;</button>
+          <span class="val" id="vLettres">0</span>
+          <button type="button" class="acc-b" onclick="pas('lettres',1)" aria-label="Augmenter l'espacement">+</button>
+        </div>
+      </div>
+      <button type="button" class="acc-reset" onclick="reinitialiser()">Réinitialiser</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script src="corps.js"></script>
+</body>
+</html>
